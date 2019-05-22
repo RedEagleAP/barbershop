@@ -95,22 +95,22 @@ $meow-globals: (
 // @prop {string} base.fontname.variant.style    - Associated Fontstyle
 // @prop {bool}   base.fontname.variant.short    - Use the Short Syntax for Fontfaces (Use not when Support => IE8 or Android => 4.3)
 $meow-fontface-map: (
-  PTSansNarrow: (
-    1: (
-      filename: 'ptn57f-webfont',
-      weight: 400,
-      style: normal,
-      display: swap,
-      short: true
-    ),
-    2: (
-      filename: 'ptn77f-webfont',
-      weight: 700,
-      style: normal,
-      display: swap,
-      short: true
-    )
-  )
+  // 'PT Sans Narrow': (
+  //   1: (
+  //     filename: 'ptn57f-webfont',
+  //     weight: 400,
+  //     style: normal,
+  //     display: swap,
+  //     short: true
+  //   ),
+  //   2: (
+  //     filename: 'ptn77f-webfont',
+  //     weight: 700,
+  //     style: normal,
+  //     display: swap,
+  //     short: true
+  //   )
+  // )
 );
 
 // Iconfont Configuration
