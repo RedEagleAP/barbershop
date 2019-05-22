@@ -1,0 +1,82 @@
+/*
+ |--------------------------------------------------------------------------
+ | .button
+ |--------------------------------------------------------------------------
+ */
+
+.button {
+  display: inline-block;
+  padding: em(15px) em(30px) em(15px);
+  border: 1px solid #e5ddd5;
+
+  color: #000;
+  font-size: rem(18px);
+  line-height: (24/18);
+  font-weight: 700;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    border-color: #d5c9bd;
+    color: #000;
+  }
+
+  &:active {
+    box-shadow: none;
+    color: rgba(black, 0.3);
+    background-color: #d5c9bd;
+  }
+
+  @include break('l') {
+    &:hover {
+      animation: rubberBand 1s;
+    }
+  }
+
+  @include modifier(wide) {
+    width: 100%;
+  }
+
+  @include modifier(dark) {
+    border: 1px solid #3f3f3f;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      border-color: #545454;
+      color: #fff;
+    }
+
+    &:active {
+      border-color: #252525;
+      color: rgba(#fff, 0.3);
+      background-color: #252525;
+    }
+  }
+
+  @include modifier(fill) {
+    border: 0;
+    color: #fff;
+    transition: all 0.25s e('in-out-sine');
+    background-color: $primary;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: #6a4d38;
+    }
+
+    &:active {
+      color: rgba(#fff, 0.3);
+      background-color: #6a4d38;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: #aeaeae;
+    }
+  }
+}

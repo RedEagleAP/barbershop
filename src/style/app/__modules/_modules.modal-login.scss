@@ -1,0 +1,101 @@
+.modal-login {
+  visibility: hidden;
+  position: fixed;
+  top: 135px;
+  left: 50%;
+  z-index: 200;
+
+  width: 100vw;
+  max-width: 462px;
+  min-height: 425px;
+  max-height: 504px;
+
+  margin-left: -50vw;
+  padding: rem(30px) rem(20px) rem(36px);
+
+  box-shadow: 0 30px 50px rgba(black, 0.75);
+  color: #000;
+  background-color: #f8f5f2;
+
+  @include modifier(show) {
+    visibility: visible;
+    animation: bounceInDown 1s e('out-cubic') forwards;
+  }
+
+  @include modifier(closed) {
+    visibility: visible;
+    animation: bounceOutDown 1s e('out-cubic') forwards;
+  }
+
+  @include break(462px, min) {
+    margin-left: -231px;
+  }
+
+  @include break('m') {
+    top: 130px;
+    min-height: 504px;
+    padding: rem(52px) rem(70px) rem(56px);
+  }
+
+  @include element(title) {
+    margin-bottom: rem(21px);
+    color: #000;
+    font-size: rem(30px);
+    line-height: 1;
+    text-align: center;
+
+    @include break('m') {
+      font-size: rem(40px);
+    }
+  }
+
+  @include element(descr) {
+    margin-bottom: rem(26px);
+    text-align: center;
+  }
+
+  @include element(form) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include element(user-info) {
+    margin-bottom: rem(26px);
+  }
+
+  @include element(support) {
+    margin-bottom: rem(33px);
+  }
+
+  @include element(send-button) {
+    @include break(766px, max) {
+      display: none;
+    }
+  }
+
+  @include element(close-button) {
+    @include svg-color($icon-cross, #fff);
+
+    position: absolute;
+    top: 62px;
+    right: -77px;
+
+    width: 26px;
+    height: 26px;
+    border: 0;
+
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: transparent;
+
+    &:hover {
+      animation: heartBeat 1s ease-in-out;
+    }
+
+    @include break(766px, max) {
+      display: none;
+    }
+  }
+}

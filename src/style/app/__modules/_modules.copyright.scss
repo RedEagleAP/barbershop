@@ -1,0 +1,22 @@
+/*
+ |--------------------------------------------------------------------------
+ | .copyright
+ |--------------------------------------------------------------------------
+ */
+
+.copyright {
+  text-align: center;
+
+  @include element(text) {
+    display: inline-block;
+    margin-bottom: rem(10px);
+    font-weight: 400;
+  }
+
+  @include element(link) {
+
+    @include break('l') {
+      width: auto;
+    }
+  }
+}

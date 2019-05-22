@@ -1,0 +1,354 @@
+/*
+ |--------------------------------------------------------------------------
+ | .works
+ |--------------------------------------------------------------------------
+ */
+
+.works {
+  @include section-triangle(34px, $color: #353535);
+
+  padding-bottom: rem(48px);
+
+  @include break('m') {
+    padding-bottom: rem(62px);
+
+    &::after,
+    &::before {
+      border-bottom-width: rem(43px);
+    }
+  }
+
+  @include break('l') {
+    padding-bottom: rem(88px);
+
+    &::after,
+    &::before {
+      display: none;
+    }
+
+    .o-col-max-2 {
+      display: flex;
+    }
+
+    .o-col-max-2:nth-child(3n+1) .works-item {
+      margin-right: rem(-55px);
+    }
+
+    .o-col-max-2:nth-child(3n+2) .works-item {
+      margin-right: rem(-25px);
+      margin-left: rem(-25px);
+    }
+
+    .o-col-max-2:nth-child(3n+3) .works-item {
+      margin-left: rem(-55px);
+    }
+  }
+}
+
+.works-item {
+  margin-bottom: rem(20px);
+
+  @include break('m') {
+    display: flex;
+    align-items: stretch;
+
+    margin-bottom: rem(41px);
+  }
+
+  @include break('l') {
+    &:not(.works-item--work-of-month) {
+      flex-direction: column;
+      width: 294px;
+
+      .works-item__review {
+        padding: rem(30px) rem(35px) rem(10px);
+
+        border-top: none;
+        border-left: 1px solid #e5ddd5;
+      }
+    }
+  }
+
+  @include modifier(work-of-month) {
+    position: relative;
+
+    &::before {
+      content: 'Работа месяца';
+      position: absolute;
+      top: 401px;
+      left: 0;
+      z-index: 2;
+
+      width: 160px;
+      padding: rem(15px);
+      color: #fff;
+
+      font-size: rem(20px);
+      line-height: 1;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+
+      background-color: $primary;
+
+      @include break('m') {
+        top: 35px;
+        bottom: auto;
+      }
+
+      @include break('l') {
+        top: 27px;
+        right: 0;
+        bottom: auto;
+        left: auto;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 401px;
+      left: 160px;
+      z-index: 2;
+
+      width: 16px;
+      height: 50px;
+
+      background-image: linear-gradient(to top left, transparent 50%, $primary 50%), linear-gradient(to top right, $primary 50%, transparent 50%);
+
+      @include break('m') {
+        top: 35px;
+        bottom: auto;
+      }
+
+      @include break('l') {
+        top: 27px;
+        right: 160px;
+        bottom: auto;
+        left: auto;
+
+        background-image:
+ linear-gradient(to top left, $primary 50%, transparent 50%), linear-gradient(to top right, transparent 50%, $primary 50%);
+      }
+    }
+
+    .works-item__image-wrapper::before {
+      padding-bottom: calc((12/7) * 100%);
+
+      /* picture aspect-ratio: 280px/480px */
+
+      @include break('m') {
+        padding-bottom: calc((48/27) * 100%);
+
+        /* picture aspect-ratio: 270px/480px */
+      }
+
+      @include break('l') {
+        padding-bottom: 100%;
+
+        /* picture aspect-ratio: 480px/480px */
+      }
+    }
+
+    @include break('l') {
+      .works-item__image-wrapper {
+        width: 480px;
+      }
+
+      .works-item__review {
+        width: 480px;
+        padding: rem(128px) rem(42px) rem(12px);
+      }
+
+      .works-item__text {
+        padding-right: rem(85px);
+      }
+
+      .works-item__parameter-item {
+        margin-bottom: rem(15px);
+      }
+    }
+  }
+
+  @include element(image-wrapper) {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    line-height: 0;
+    text-align: center;
+
+    background-color: #e6ded6;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      padding-bottom: calc((10/16) * 100%);
+
+      /* picture aspect-ratio: 280px/176px */
+    }
+
+    @include break('m') {
+      width: calc((270/640) * 100%);
+
+      &::before {
+        padding-bottom: calc((294/270) * 100%);
+
+        /* picture aspect-ratio: 270px/294px */
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        box-sizing: content-box;
+
+        width: calc(100% - 1px);
+        height: calc(100% - 1px);
+
+        border: 1px solid #e5ddd5;
+        border-top: none;
+        border-right: none;
+      }
+    }
+
+    @include break('l') {
+      width: auto;
+
+      &::before {
+        padding-bottom: 100%;
+
+        /* picture aspect-ratio: 294px/294px */
+      }
+    }
+  }
+
+  @include element(image) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    @include break('m') {
+      z-index: 1;
+    }
+  }
+
+  @include element(review) {
+    padding: rem(19px) rem(21px) 0;
+
+    border: 1px solid #e5ddd5;
+    border-top: none;
+
+    @include break('m') {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: calc((370/640) * 100%);
+
+      padding: rem(43px) rem(50px) rem(20px);
+
+      border-top: 1px solid #e5ddd5;
+      border-left: none;
+    }
+
+    @include break('l') {
+      width: auto;
+      flex-grow: 1;
+    }
+  }
+
+  @include element(title) {
+    margin-bottom: rem(14px);
+    color: #000;
+
+    font-size: rem(24px);
+    line-height: calc(27/24);
+    font-weight: 700;
+    text-transform: none;
+
+    @include break('m') {
+      margin-bottom: rem(26px);
+    }
+  }
+
+  @include element(text) {
+    margin-bottom: rem(16px);
+    color: #000;
+    font-style: normal;
+
+    @include break('l') {
+      margin-bottom: rem(25px);
+    }
+  }
+
+  @include element(parameter-list) {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0;
+    margin-top: auto;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  @include element(parameter-item) {
+    position: relative;
+
+    width: auto;
+    margin-right: rem(30px);
+    margin-bottom: rem(15px);
+    padding-left: rem(36px);
+
+    font-size: rem(16px);
+    text-transform: uppercase;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      width: 45px;
+      height: 21px;
+
+      transform: translate(-30%, -50%);
+
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include break('l') {
+      margin-right: rem(35px);
+      margin-bottom: rem(21px);
+    }
+
+    @include modifier(haircut) {
+      &::before {
+        @include svg-color($icon-scissors, $primary);
+      }
+    }
+
+    @include modifier(shaving) {
+      &::before {
+        @include svg-color($beard-1, $primary);
+      }
+    }
+
+    @include modifier(mustache) {
+      &::before {
+        @include svg-color($icon-mustache, $primary);
+      }
+    }
+  }
+}

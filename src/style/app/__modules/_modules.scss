@@ -1,0 +1,42 @@
+/*
+ |--------------------------------------------------------------------------
+ |  Modules
+ |--------------------------------------------------------------------------
+ */
+/* index.html */
+@import 'modules.page-header';
+@import 'modules.main-nav';
+@import 'modules.site-list';
+@import 'modules.user-list';
+@import 'modules.button';
+@import 'modules.page-main';
+@import 'modules.stats';
+@import 'modules.advantages';
+@import 'modules.news';
+@import 'modules.reviews';
+@import 'modules.page-footer';
+@import 'modules.contacts';
+@import 'modules.social';
+@import 'modules.copyright';
+
+/* photo.html */
+@import 'modules.page-title';
+@import 'modules.works';
+@import 'modules.price-current';
+@import 'modules.price-table';
+
+/* form.html */
+@import 'modules.booking-form';
+@import 'modules.input-box';
+@import 'modules.feedback-textarea';
+@import 'modules.booking-form-title';
+@import 'modules.beards-form';
+@import 'modules.radio-box';
+@import 'modules.additional-services';
+@import 'modules.checkbox-box';
+
+/* modal-login */
+@import 'modules.modal-login';
+@import 'modules.info-user';
+@import 'modules.support';
+@import 'modules.form-send';

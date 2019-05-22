@@ -1,0 +1,48 @@
+/*
+ |--------------------------------------------------------------------------
+ | .page-title
+ |--------------------------------------------------------------------------
+ */
+
+.page-title {
+  padding: rem(30px) 0;
+
+  @include break('m') {
+    padding-top: rem(54px);
+    padding-bottom: rem(40px);
+  }
+
+  @include break('l') {
+    padding-bottom: rem(78px);
+  }
+
+  @include element(wrap) {
+
+    @include break('m') {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  @include element(title) {
+    margin: 0;
+    color: #000;
+    font-size: rem(30px);
+    line-height: 1;
+    text-align: center;
+
+    @include break('m') {
+      margin-top: rem(9px);
+      font-size: rem(40px);
+      text-align: left;
+    }
+  }
+
+  @include element(to-main) {
+    display: none;
+
+    @include break('m') {
+      display: inline-block;
+    }
+  }
+}

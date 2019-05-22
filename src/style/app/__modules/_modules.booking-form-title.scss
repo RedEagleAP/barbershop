@@ -1,0 +1,35 @@
+/*
+ |--------------------------------------------------------------------------
+ | .booking-form-title
+ |--------------------------------------------------------------------------
+ */
+
+.booking-form-title {
+  display: block;
+  margin-bottom: rem(36px);
+
+  font-size: rem(20px);
+  line-height: calc(27 /20);
+  text-align: center;
+  text-transform: uppercase;
+
+  @include break('m') {
+    @include heading-line(1px, 50px, #e5ddd5, rem(25px));
+
+    margin-bottom: rem(45px);
+    font-size: rem(30px);
+    line-height: 1;
+  }
+
+  @include break('l') {
+    margin-bottom: rem(50px);
+
+    &::before {
+      margin-right: rem(40px);
+    }
+
+    &::after {
+      margin-left: rem(40px);
+    }
+  }
+}

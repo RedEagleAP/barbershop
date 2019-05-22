@@ -1,0 +1,264 @@
+/*
+ |--------------------------------------------------------------------------
+ | .stats
+ |--------------------------------------------------------------------------
+ */
+
+.stats {
+  width: auto;
+
+  @include break('m') {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @include break('l') {
+    margin-top: rem(-158px);
+
+    [class^='o-col'] {
+      display: flex;
+    }
+  }
+
+  @include element(header) {
+    width: 100vw;
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+    padding: rem(30px) rem(40px) rem(25px);
+
+    color: #000;
+    background-color: #fff;
+
+    @include break('m') {
+      display: flex;
+      position: relative;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      width: 100%;
+      margin: 0 auto;
+      margin-top: rem(-182px);
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 27px;
+        left: -14px;
+
+        border: 15px solid transparent;
+        transform: rotate(45deg);
+        border-bottom-color: #fff;
+      }
+    }
+
+    @include break('l') {
+      flex-direction: column;
+      width: 320px;
+      margin-top: 0;
+      margin-right: rem(-80px);
+      flex-grow: 1;
+
+      &::before {
+        top: 22px;
+      }
+    }
+  }
+
+  @include element(slogan) {
+    display: block;
+    margin-bottom: rem(15px);
+
+    font-size: rem(30px);
+    line-height: 1;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include break('m') {
+      width: 50%;
+      margin-bottom: rem(18px);
+
+      font-size: rem(40px);
+      line-height: 1;
+      text-align: left;
+      text-transform: none;
+    }
+
+    @include break('l') {
+      width: auto;
+      margin-bottom: rem(42px);
+    }
+  }
+
+  @include element(intro) {
+    margin: 0;
+
+    font-size: rem(20px);
+    line-height: calc(27 / 20);
+    text-align: center;
+
+    @include break('m') {
+      width: 47.5%;
+      margin-top: 5px;
+      padding: 0;
+      padding-left: rem(30px);
+
+      text-align: left;
+    }
+
+    @include break('l') {
+      width: auto;
+      margin-bottom: rem(32px);
+      padding-right: rem(30px);
+      padding-left: 0;
+    }
+  }
+
+  @include element(legend) {
+    display: block;
+
+    font-size: rem(20px);
+    line-height: 1;
+
+    sup {
+      top: -0.25em;
+
+      font-size: 90%;
+    }
+
+    @include modifier(bottom) {
+      padding-top: rem(20px);
+      padding-bottom: rem(14px);
+
+      color: rgba(#fff, 0.3);
+      text-align: center;
+    }
+
+    @include modifier(top) {
+      display: none;
+    }
+
+    @include break('m') {
+      @include modifier(bottom) {
+        display: none;
+      }
+
+      @include modifier(top) {
+        display: block;
+        width: 50%;
+
+        color: rgba(#000, 0.3);
+      }
+    }
+
+    @include break('l') {
+      @include modifier(top) {
+        width: auto;
+        margin-top: auto;
+      }
+    }
+  }
+
+  @include element(list) {
+    width: 100vw;
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+
+    tr {
+      color: #fff;
+      background-color: #404040;
+
+      &:nth-child(2) {
+        background-color: #4e4e4e;
+      }
+
+      &:nth-child(3) {
+        background-color: #353535;
+      }
+
+      &:nth-child(4) {
+        background-color: #404040;
+      }
+    }
+
+    @include break('m') {
+      width: 100.1%;
+      margin: 0 auto;
+      margin-top: rem(-10px);
+
+      tbody {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      tr {
+        width: 50%;
+        padding: rem(25px) rem(35px);
+        padding-bottom: rem(28px);
+      }
+
+      td {
+        display: block;
+        width: auto;
+        padding: 0;
+      }
+    }
+
+    @include break('l') {
+      display: flex;
+      width: 640px;
+      margin-top: 0;
+      margin-left: rem(-40px);
+      flex-grow: 1;
+    }
+  }
+
+  @include element(value) {
+    vertical-align: top;
+    width: 50%;
+
+    padding-top: rem(20px);
+    padding-right: 0;
+    padding-bottom: rem(19px);
+    padding-left: calc(20px + (10000vw - 32000px)/880);
+
+    font-size: rem(40px);
+    line-height: 1;
+
+    sup {
+      top: -0.35em;
+      margin-left: 5px;
+    }
+
+    @include break('m') {
+      margin-bottom: 7px;
+
+      font-size: rem(72px);
+      line-height: 1;
+    }
+  }
+
+  @include element(field) {
+    vertical-align: top;
+    width: 50%;
+
+    padding-top: rem(20px);
+    padding-right: calc(20px + (10000vw - 32000px)/880);
+    padding-bottom: rem(19px);
+    padding-left: 0;
+
+    font-size: rem(18px);
+    line-height: 1;
+    text-align: right;
+
+    @include break('m') {
+      font-size: rem(20px);
+      line-height: calc(27 / 20);
+      text-align: left;
+
+      br {
+        display: none;
+      }
+    }
+  }
+}

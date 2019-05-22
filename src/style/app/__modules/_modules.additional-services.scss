@@ -1,0 +1,46 @@
+/*
+ |--------------------------------------------------------------------------
+ | .additional-services
+ |--------------------------------------------------------------------------
+ */
+
+.additional-services {
+
+  @include element(checkbox) {
+    padding-bottom: rem(46px);
+
+    @include break('m') {
+      display: flex;
+      flex-wrap: wrap;
+
+      padding-top: rem(25px);
+      padding-bottom: rem(11px);
+    }
+
+    @include break('l') {
+      padding-bottom: rem(33px);
+    }
+  }
+
+  @include element(field) {
+    margin-bottom: rem(20px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include break('m') {
+      width: calc(50% - 70px);
+      margin-right: rem(70px);
+      margin-bottom: rem(47px);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    @include break('l') {
+      width: calc((100% / 3) - 70px);
+    }
+  }
+}

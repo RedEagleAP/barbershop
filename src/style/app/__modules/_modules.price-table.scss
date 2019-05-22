@@ -1,0 +1,84 @@
+/*
+ |--------------------------------------------------------------------------
+ | .price-table
+ |--------------------------------------------------------------------------
+ */
+
+.price-table {
+  width: 100%;
+  margin-bottom: rem(20px);
+  color: #fff;
+  font-size: rem(20px);
+  line-height: calc(27 / 20);
+
+  @include break('m') {
+    margin-bottom: rem(10px);
+    border: 1px solid #4a4a4a;
+
+    tr,
+    td {
+      border: 1px solid #4a4a4a;
+    }
+
+    td:not(.price-table__number) {
+      padding: rem(16px) rem(20px);
+    }
+  }
+
+  @include break('l') {
+    height: 100%;
+    margin-bottom: 0;
+  }
+
+  @include element(number) {
+    display: none;
+
+    @include break('m') {
+      display: table-cell;
+      padding: rem(16px) rem(30px);
+      color: rgba(#fff, 0.3);
+      text-align: center;
+    }
+  }
+
+  @include element(name) {
+    display: block;
+    width: 90%;
+    font-weight: 700;
+
+    @include break('m') {
+      display: table-cell;
+      width: auto;
+    }
+  }
+
+  @include element(descr) {
+    display: block;
+    width: 90%;
+    margin-bottom: rem(10px);
+
+    @include break('m') {
+      display: table-cell;
+      width: auto;
+      margin-bottom: 0;
+    }
+  }
+
+  @include element(descr-bracket) {
+    @include break('m') {
+      display: none;
+    }
+  }
+
+  @include element(price) {
+    vertical-align: top;
+    width: 10%;
+    text-align: right;
+
+    @include break('m') {
+      vertical-align: middle;
+      width: auto;
+      text-align: left;
+    }
+  }
+}

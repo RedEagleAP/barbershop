@@ -1,0 +1,166 @@
+/*
+ |--------------------------------------------------------------------------
+ | .advantages .features .slider
+ |--------------------------------------------------------------------------
+ */
+
+.features {
+  display: none;
+
+  @include break('m') {
+    display: block;
+  }
+}
+
+.slider {
+
+  @include break('m') {
+    display: none;
+  }
+}
+
+.advantages {
+
+  @include element(wrapper) {
+    min-height: 350px;
+    padding-top: rem(30px);
+
+    @include break('m') {
+      @include section-triangle(43px);
+
+      padding-top: 0;
+      padding-bottom: rem(90px);
+    }
+
+    @include break('l') {
+      padding-top: rem(80px);
+      padding-bottom: rem(100px);
+
+      &::after,
+      &::before {
+        border-bottom-width: rem(60px);
+      }
+    }
+  }
+
+  @include element(list) {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    @include break('l') {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  @include element(item) {
+    position: relative;
+    padding-top: rem(128px);
+
+    text-align: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include break('m') {
+      width: calc(100% * (568 / 640));
+      margin: 0 auto;
+      margin-bottom: rem(39px);
+      padding-top: rem(46px);
+      padding-left: rem(124px);
+      border-top: 1px solid rgba(white, 0.1);
+
+      text-align: left;
+
+      &:first-of-type {
+        border-top: 0;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        top: auto;
+        bottom: 0;
+        left: 5px;
+        transform: none;
+      }
+    }
+
+    @include break('l') {
+      width: 320px;
+      margin: 0;
+      padding: rem(120px) rem(40px) 0;
+      border: 0;
+      border-right: 1px solid rgba(white, 0.1);
+      text-align: center;
+
+      &:last-of-type {
+        border-right: 0;
+      }
+
+      &::before {
+        top: 0;
+        bottom: auto;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    @include modifier(fast) {
+      &::before {
+        @include svg-color($advantages-fast, $primary);
+
+        width: 95px;
+        height: 94px;
+      }
+    }
+
+    @include modifier(cool) {
+      &::before {
+        @include svg-color($advantages-cool, $primary);
+
+        width: 94px;
+        height: 89px;
+      }
+    }
+
+    @include modifier(price) {
+      &::before {
+        @include svg-color($advantages-price, $primary);
+
+        width: 94px;
+        height: 92px;
+      }
+    }
+  }
+
+  @include element(title) {
+    margin-bottom: rem(22px);
+
+    font-size: rem(30px);
+    line-height: 1;
+  }
+
+  @include element(description) {
+    margin-bottom: rem(88px);
+    padding-right: rem(20px);
+    padding-left: rem(20px);
+
+    font-size: rem(20px);
+    line-height: (27/20);
+
+    @include break('m') {
+      margin-bottom: 0;
+      padding: 0;
+    }
+  }
+}

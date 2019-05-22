@@ -1,0 +1,147 @@
+/*
+ |--------------------------------------------------------------------------
+ | .input-box
+ |--------------------------------------------------------------------------
+ */
+
+.input-box {
+  position: relative;
+  margin-bottom: rem(6px);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include break('m') {
+    margin-bottom: 0;
+  }
+
+  @include element(field) {
+    width: 100%;
+    padding: rem(10px) rem(20px);
+    border: 1px solid #e5ddd5;
+
+    color: #000;
+    font-size: rem(18px);
+    line-height: calc(30 / 18);
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      border-color: #d5c9bd;
+    }
+
+    &:focus {
+      border-color: transparent;
+      box-shadow: none;
+    }
+
+    &:focus ~ .input-box__border--top {
+      transform: scaleX(1);
+      transform-origin: top right;
+    }
+
+    &:focus ~ .input-box__border--right {
+      transform: scaleY(1);
+      transform-origin: bottom right;
+    }
+
+    &:focus ~ .input-box__border--bottom {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    &:focus ~ .input-box__border--left {
+      transform: scaleY(1);
+      transform-origin: top left;
+    }
+
+    &:focus ~ .input-box__label,
+    &:valid ~ .input-box__label {
+      top: 2px;
+      left: 6px;
+
+      color: #7f5e47;
+      font-size: rem(12px);
+      line-height: 1;
+    }
+
+    @include break('m') {
+      padding: rem(20px) rem(25px);
+      font-size: rem(24px);
+      line-height: calc(30 / 24);
+
+      &:focus ~ .input-box__label,
+      &:valid ~ .input-box__label {
+        top: 4px;
+        left: 8px;
+
+        font-size: rem(14px);
+        line-height: 1;
+      }
+    }
+  }
+
+  @include element(border) {
+    position: absolute;
+    transition: transform 0.5s ease;
+    background-color: #999;
+
+    @include modifier(top) {
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 1px;
+      transform: scaleX(0);
+      transform-origin: top left;
+    }
+
+    @include modifier(right) {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 1px;
+      transform: scaleY(0);
+      transform-origin: top right;
+    }
+
+    @include modifier(bottom) {
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+    }
+
+    @include modifier(left) {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 1px;
+      transform: scaleY(0);
+      transform-origin: bottom left;
+    }
+  }
+
+  @include element(label) {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 1;
+
+    color: #000;
+    font-size: rem(18px);
+    line-height: calc(30 / 18);
+
+    transition: all 0.25s e('out-cubic');
+    pointer-events: none;
+
+    @include break('m') {
+      top: 20px;
+      left: 25px;
+
+      font-size: rem(24px);
+      line-height: calc(30 / 24);
+    }
+  }
+}

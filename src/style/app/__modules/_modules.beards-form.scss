@@ -1,0 +1,38 @@
+/*
+ |--------------------------------------------------------------------------
+ | .beards-form
+ |--------------------------------------------------------------------------
+ */
+
+.beards-form {
+
+  @include element(radio) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: rem(44px);
+    margin-left: rem(9px);
+
+    @include break('m') {
+      justify-content: space-between;
+
+      margin-right: rem(15px);
+      margin-bottom: rem(60px);
+      margin-left: rem(15px);
+    }
+
+    @include break('l') {
+      margin-right: rem(45px);
+      margin-left: rem(45px);
+    }
+  }
+
+  @include element(field) {
+    margin-right: rem(34px);
+    margin-bottom: rem(120px);
+
+    @include break('m') {
+      margin-right: 0;
+    }
+  }
+}

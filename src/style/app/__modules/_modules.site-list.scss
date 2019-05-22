@@ -1,0 +1,151 @@
+/*
+ |--------------------------------------------------------------------------
+ | .site-list
+ |--------------------------------------------------------------------------
+ */
+
+.site-list {
+  font-weight: 700;
+
+  @include break('m') {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 570px;
+    flex-grow: 1;
+  }
+
+  @include break('l') {
+    justify-content: flex-start;
+    width: 780px;
+  }
+
+  @include element(item) {
+    a {
+      display: block;
+
+      padding: 12px 21px;
+      padding-bottom: 13px;
+      color: #fff;
+
+      line-height: 1.33333;
+
+      border-top: 1px solid #886e5b;
+      border-bottom: 1px solid #71543f;
+      background-color: $primary;
+      text-transform: uppercase;
+    }
+
+    a[href] {
+      &:hover {
+        border-top-color: $primary-hover;
+        background-color: $primary-hover;
+      }
+
+      &:active {
+        color: rgba(255, 255, 255, 0.3);
+        border-top-color: $primary-active;
+        background-color: $primary-active;
+      }
+    }
+
+    @include break('m') {
+      margin-right: 32px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &--active {
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: 0;
+          bottom: -3px;
+          left: 0;
+
+          height: 3px;
+          background: $primary;
+        }
+      }
+
+      a {
+        padding: 0;
+        padding-top: 25px;
+        padding-bottom: 23px;
+
+        border: 0;
+        background: none;
+      }
+
+      a[href] {
+        &:hover {
+          color: $primary;
+          background-color: #000;
+        }
+
+        &:active {
+          opacity: 0.3;
+          color: #fff;
+          background-color: #000;
+        }
+      }
+    }
+
+    @include break('l') {
+      margin-right: 0;
+
+      &--active {
+        &::after {
+          right: 30px;
+          left: 30px;
+        }
+      }
+
+      a {
+        padding-right: 31px;
+        padding-left: 31px;
+      }
+
+      a[href] {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        transition: color 0.4s ease-in-out;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 100%;
+          right: 100%;
+          z-index: -1;
+
+          width: 31px;
+          height: 31px;
+
+          transform: translate(50%, -50%) scale(0);
+          transition: transform 0.45s ease-in-out;
+          border-radius: 50%;
+          background-color: #fff;
+          transform-origin: center;
+        }
+
+        &:hover {
+          color: #000;
+        }
+
+        &:hover::before {
+          transform: translate(50%, -50%) scale(15);
+        }
+
+        &:active {
+          opacity: 1;
+          color: rgba(0, 0, 0, 0.3);
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}

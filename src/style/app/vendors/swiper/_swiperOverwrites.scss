@@ -1,0 +1,116 @@
+/*
+ |--------------------------------------------------------------------------
+ | .swiper
+ |--------------------------------------------------------------------------
+ */
+/* stylelint-disable */
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 40px;
+
+  @include break('m') {
+    bottom: 59px;
+    background-color: #f8f5f2;
+    width: calc(100% * (126 / 542));
+    left: 50%;
+    transform: translate3d(0, 0, 0) translateX(-50%);
+  }
+
+  @include break('l') {
+    bottom: 46px;
+    width: 100%;
+    left: 0;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: transparent;
+  width: 8px;
+  height: 8px;
+  border-radius: 0;
+  border: 1px solid co('white');
+  transform: rotate(45deg);
+  opacity: 0.7;
+}
+
+.reviews .swiper-pagination-bullet {
+  border: 1px solid #353535;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 20px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: co('white');
+  opacity: 1;
+}
+
+.reviews .swiper-pagination-bullet-active {
+  background-color: #353535;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background: #f8f5f2;
+  width: 50px;
+  height: 160px;
+  top: auto;
+  bottom: -10px;
+  padding: 0;
+  border: 1px solid #edddd5;
+  transform: translateY(-50%);
+  transition: all 0.25s ease('out-cubic');
+
+  .reviews__triangle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @include break('l') {
+    height: 161px;
+    bottom: 18px;
+  }
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  border: 1px solid #d5c9bd;
+}
+
+.swiper-button-prev:active,
+.swiper-button-next:active {
+  background: #d5c9bd;
+  border: 1px solid #d5c9bd;
+
+  .reviews__triangle {
+    opacity: 0.3;
+  }
+}
+
+.swiper-button-prev {
+  left: 0;
+
+  .reviews__triangle {
+    @include triangle(7px, #000, 'left');
+  }
+}
+
+.swiper-button-next {
+  right: 0;
+
+  .reviews__triangle {
+    @include triangle(7px, #000, 'right');
+  }
+}
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+/* stylelint-enable */

@@ -1,0 +1,133 @@
+/*
+ |--------------------------------------------------------------------------
+ | .user-list
+ |--------------------------------------------------------------------------
+ */
+
+.user-list {
+  @include break('m') {
+    width: 60px;
+  }
+
+  @include break('l') {
+    width: auto;
+    max-width: 160px;
+  }
+
+  @include element(item) {
+    color: #fff;
+  }
+
+  @include element(login) {
+    display: block;
+    position: relative;
+
+    padding: rem(17px) rem(21px);
+    padding-left: rem(49px);
+
+    color: #fff;
+    line-height: 1;
+
+    &::before {
+      @include svg-color($svg-login, #fff);
+
+      content: '';
+      position: absolute;
+      top: 17px;
+      left: 21px;
+
+      width: 16px;
+      height: 16px;
+
+      opacity: 0.3;
+      background-repeat: no-repeat;
+    }
+
+    @include break('m') {
+      width: 60px;
+      height: 70px;
+      padding: 0;
+
+      font-size: 0;
+
+      &:hover::before {
+        @include svg-color($svg-login, $primary);
+
+        opacity: 1;
+      }
+
+      &:active::before {
+        @include svg-color($svg-login, #fff);
+
+        opacity: 0.3;
+      }
+
+      &::before {
+        top: 29px;
+        left: 12px;
+      }
+    }
+
+    @include break('l') {
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+
+      width: auto;
+      height: auto;
+      padding: rem(25px) rem(30px) rem(23px) rem(50px);
+
+      font-size: rem(18px);
+      line-height: calc(24 / 18);
+      font-weight: 700;
+
+      transition: color 0.4s ease-in-out;
+      text-transform: uppercase;
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 100%;
+        bottom: 100%;
+        z-index: -1;
+
+        width: 30px;
+        height: 30px;
+        transform: translate(50%, 50%) scale(0);
+        transition: transform 0.45s ease-in-out;
+
+        border-radius: 50%;
+        background-color: #fff;
+        transform-origin: center;
+      }
+
+      &:hover {
+        color: #000;
+      }
+
+      &:hover::after {
+        transform: translate(50%, 50%) scale(15);
+      }
+
+      &:active {
+        color: rgba(#000, 0.3);
+
+        background-color: #fff;
+      }
+
+      &:hover::before {
+        @include svg-color($svg-login, #000);
+
+        opacity: 0.3;
+      }
+
+      &:active::before {
+        opacity: 0.1;
+      }
+
+      &::before {
+        left: 15px;
+      }
+    }
+  }
+}

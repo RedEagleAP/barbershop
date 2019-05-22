@@ -1,0 +1,35 @@
+module.exports = {
+  presets: [
+    [
+      '@babel/preset-env',
+      {
+        useBuiltIns: 'entry',
+        corejs: '3',
+        // modules: false, // only use for element-ui
+        debug: false,
+      },
+    ],
+  ],
+  plugins: [
+    /**
+     * Element UI Use
+     */
+    /*
+    [
+      'component',
+      {
+        libraryName: 'element-ui',
+        styleLibraryName: 'theme-chalk'
+      }
+    ],
+    */
+    '@babel/plugin-syntax-dynamic-import',
+    '@babel/plugin-proposal-class-properties',
+    '@babel/plugin-proposal-object-rest-spread',
+  ],
+  env: {
+    test: {
+      presets: [['@babel/preset-env']],
+    },
+  },
+};

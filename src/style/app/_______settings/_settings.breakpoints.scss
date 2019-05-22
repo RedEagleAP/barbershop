@@ -1,0 +1,74 @@
+// ==========================================================================
+//   Breakpoint Settings
+// ==========================================================================
+
+// Imports
+// Important to include "Include Media" at this point
+// Cause we set the map our Breakpoints to their map $breakpoints
+@import '../../../../node_modules/include-media/dist/include-media';
+
+$bk-bp-min: 320px;
+$bk-bp-m: 768px;
+$bk-bp-max: 1200px;
+
+// Settings
+$bk-grid-settings-custom: ( // You want to use CSS Grid?
+  // @Boolean
+  // default: true
+  cssgrid: false,
+
+  // Your Project must support older browsers? No Problem, we've a Fallback (flexbox) here!
+  // @Boolean
+  // default: true
+  cssgrid-fallback: false,
+
+  // You want to use Flexbox only? Also no Problem! But you must set the "cssgrid-fallback" and "cssgrid" to false.
+  // @Boolean
+  // default: false
+  flexboxgrid: true,
+
+  // This add some CSS Styleing to the "section", "row" and "col" classes.
+  // @Boolean
+  // default: false
+  testing: false,
+
+  // Naming Conventions? No Problem. You can choose you prefix!
+  // @String
+  // default: 'o-'
+  prefix: 'o-',
+
+  // Units are for Paddings and Margins. All Paddings an Margins are Fluid.
+  // That means that on the smallest breakpoint the Padding on each col side
+  // is: gutter * gutter-min-factor (8px * 1) and on the biggest breakpoint it
+  // is: gutter * gutter-max-factor (8px * 2)
+  // For Margins top it is the same with the Vertical factors.
+  units: (gutter: 10px,
+    gutter-min-factor: 1,
+    gutter-max-factor: 6, //  5.66
+    gutter-min-vertical-factor: 1,
+    gutter-max-vertical-factor: 2),
+
+  // Class Creation
+  // Not every projects need all this offset / push / pull classes. You decide!
+  // @Boolean
+  // default: true
+  offset-classes: false,
+  push-classes: false,
+  pull-classes: false,
+
+  // Disbale Padding Horizontal for Sections. Rows. Cols
+  // @Boolean
+  // default: false
+  disable-padding-horizontal: false,
+
+  // Breakpoints must have at least a "min" and a "max". The other Breakpoints as u like
+  // We use all the time "min-width".
+  // Cols are how many cols can have a row on that specific breakpoint.
+  breakpoints: (min: (from: 320px, cols: 4, create-classes: true),
+    // xs:  (from: 480px, cols: 6, create-classes: true),
+    // s:   (from: 560px, cols: 12, create-classes: true),
+    m: (from: 768px, cols: 4, create-classes: true),
+    // l:   (from: 960px, cols: 24, create-classes: true),
+    max: (from: 1200px, cols: 6, create-classes: true)));
+
+@import '../../../../node_modules/baukasten-grid/scss/baukasten-grid';

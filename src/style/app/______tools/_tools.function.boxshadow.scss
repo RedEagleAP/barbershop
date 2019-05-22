@@ -1,0 +1,17 @@
+// ==========================================================================
+//   Box Shadow
+// ==========================================================================
+
+@function boxshadow($key) {
+  @if map-has-key($mw-boxshadows, $key) {
+    @return map-get($mw-boxshadows, $key);
+  }
+
+  @warn "Unknown '#{$key}' in #{map-keys($mw-boxshadows)}";
+  @return null;
+}
+
+// Shorthand Version
+@function bs($key) {
+  @return boxshadow($key);
+}

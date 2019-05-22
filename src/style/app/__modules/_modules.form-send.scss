@@ -1,0 +1,16 @@
+.form-send {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include break('m') {
+    display: none;
+  }
+
+  @include element(button) {
+    width: calc(50% - 10px);
+  }
+}

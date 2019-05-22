@@ -1,0 +1,49 @@
+/**
+ * Colors
+ */
+$primary: #826550;
+$primary-hover: #755a46;
+$primary-active: #6a4d38;
+
+$bg-c-features: #353535;
+$bg-c-footer: #292929;
+
+//MENU BTN
+$menu-btn: $primary-active;
+$menu-btn-hover: #624530; // + active
+
+//GHOST BTN
+//for light background
+$ghost-light-btn-c: #000;
+$ghost-light-btn-c-active: rgba(0, 0, 0, 0.3);
+
+$ghost-light-btn-bg: #f8f5f2;
+$ghost-light-btn-bg-active: #d5c9bd;
+
+//for dark background
+$ghost-dark-btn-c: #fff;
+$ghost-dark-btn-c-active: rgba(255, 255, 255, 0.3);
+
+$ghost-dark-btn-bg: #292929;
+$ghost-dark-btn-bg-active: #252525;
+
+//HUGE BTN
+$huge-btn-c: #fff;
+$huge-btn-c-active: rgba(255, 255, 255, 0.3);
+
+$huge-btn-bg: $primary;
+$huge-btn-bg-active: $primary-active;
+$huge-btn-bg-disabled: #aeaeae;
+
+
+//BORDER
+$border: 1px solid #e5ddd5;
+$border-hover: 1px solid #d5c9bd; // + active
+$border-focus: 1px solid #999;
+
+$border-dark: 1px solid #3f3f3f;
+$border-dark-hover: 1px solid #545454;
+
+//BOX-SHADOW
+$menu-box-shadow: 0 1px 0 #71543f,
+inset 0 1px 0 #886e5b;

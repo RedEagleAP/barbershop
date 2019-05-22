@@ -1,0 +1,178 @@
+/*
+ |--------------------------------------------------------------------------
+ | .news
+ |--------------------------------------------------------------------------
+ */
+
+.news {
+  color: #000;
+  background-color: #f8f5f2;
+  border-bottom: 1px solid #edddd5;
+
+  @include element(wrapper) {
+    @include section-triangle(34px, $direction:'up');
+
+    padding: rem(37px) 0 rem(28px);
+
+    @include break('m') {
+      display: flex;
+      flex-wrap: wrap;
+      padding: rem(42px) 0 rem(18px);
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    @include break('l') {
+      padding: rem(54px) 0 rem(20px);
+    }
+  }
+
+  @include element(title) {
+    margin-bottom: rem(11px);
+
+    color: #000;
+    font-size: rem(30px);
+    line-height: 1;
+    text-align: center;
+
+    @include break('m') {
+      margin-top: rem(3px);
+      font-size: rem(40px);
+    }
+  }
+
+  @include element(list) {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    @include break('m') {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      order: 1;
+    }
+  }
+
+  @include element(item) {
+    position: relative;
+    width: 100%;
+    padding: rem(20px) 0 rem(20px);
+
+    &:first-of-type {
+      border-bottom: 1px solid #e5ddd5;
+    }
+
+    @include break(1198px, max) {
+      &:nth-of-type(3) {
+        @include vh(false);
+      }
+    }
+
+    @include break('m') {
+      width: 48%;
+
+      &:first-of-type {
+        border: 0;
+      }
+    }
+
+    @include break('l') {
+      width: 30%;
+    }
+  }
+
+  @include element(link) {
+    color: #000;
+    transition: none;
+
+    &:hover .news__text {
+      color: $primary;
+      text-decoration: underline;
+    }
+
+    &:active .news__text {
+      color: #6a4d38;
+    }
+
+    &:hover .news__date {
+      background-color: $primary;
+    }
+
+    &:active .news__date {
+      color: rgba(white, 0.3);
+      background-color: #6a4d38;
+    }
+
+    &:hover .news__text::before {
+      border-top: 10px solid $primary;
+    }
+
+    &:active .news__text::before {
+      border-top: 10px solid #6a4d38;
+    }
+  }
+
+  @include element(date) {
+    display: flex;
+    position: absolute;
+    top: 31px;
+    left: 0;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 50px;
+    padding: 0 rem(12px);
+
+    color: #fff;
+    font-size: rem(16px);
+    line-height: 1;
+    transition: all 0.15s e('in-out-cubic');
+    background-color: #000;
+  }
+
+  @include element(day) {
+    display: block;
+    margin-bottom: rem(-3px);
+    font-size: rem(30px);
+  }
+
+  @include element(text) {
+    position: relative;
+    margin: 0;
+    padding-left: rem(70px);
+    transition: all 0.15s e('out-cubic');
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 61px;
+      left: 0;
+
+      width: 0;
+      height: 0;
+
+      transition: all 0.15s e('out-cubic');
+      border-top: 10px solid #000;
+      border-right: 25px solid transparent;
+      border-left: 25px solid transparent;
+    }
+  }
+
+  @include element(to-all) {
+
+    @include break('m') {
+      width: 161px;
+      margin-bottom: rem(30px);
+      margin-left: auto;
+    }
+  }
+}

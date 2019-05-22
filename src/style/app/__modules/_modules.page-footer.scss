@@ -1,0 +1,41 @@
+/*
+ |--------------------------------------------------------------------------
+ | .page-footer
+ |--------------------------------------------------------------------------
+ */
+
+.page-footer {
+  @include section-triangle(34px, $color: #292929, $direction: 'up');
+
+  padding: rem(36px) 0 rem(24px);
+  background-color: #292929;
+
+  .order-1 {
+    order: 0;
+
+    @include break('m') {
+      order: 1;
+    }
+
+    @include break('l') {
+      order: 0;
+    }
+  }
+
+  @include break('m') {
+    padding: rem(50px) 0 rem(58px);
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    @include element(copyright) {
+      margin-left: 30%;
+    }
+  }
+
+  @include break('l') {
+    padding-bottom: rem(60px);
+  }
+}

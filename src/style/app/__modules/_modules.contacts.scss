@@ -1,0 +1,69 @@
+/*
+ |--------------------------------------------------------------------------
+ | .contacts
+ |--------------------------------------------------------------------------
+ */
+
+.contacts {
+  color: #fff;
+  text-align: center;
+
+  @include break('m') {
+    margin-right: rem(-40px);
+    text-align: left;
+  }
+
+  @include break('l') {
+    margin-right: rem(-78px);
+    text-align: left;
+  }
+
+  @include element(title) {
+    display: inline-block;
+    margin-bottom: rem(11px);
+
+    @include break('m') {
+      text-transform: uppercase;
+    }
+  }
+
+  @include element(text) {
+    margin-bottom: rem(26px);
+
+    @include break('m') {
+      margin-bottom: rem(46px);
+    }
+
+    @include break('l') {
+      margin-bottom: 0;
+    }
+  }
+
+  @include element(phone) {
+    margin-top: rem(18px);
+
+    @include break('m') {
+      display: inline-block;
+      width: auto;
+      margin: 0;
+      padding: 0;
+      border: 0;
+
+      font-size: rem(18px);
+      line-height: (27/18);
+      font-weight: 400;
+      text-transform: none;
+      text-align: left;
+
+      &:hover {
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+
+  @include element(phone-mobile) {
+    @include break(766px, max) {
+      display: none;
+    }
+  }
+}

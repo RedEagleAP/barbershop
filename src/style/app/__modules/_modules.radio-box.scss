@@ -1,0 +1,149 @@
+/*
+ |--------------------------------------------------------------------------
+ | .radio-box
+ |--------------------------------------------------------------------------
+ */
+
+.radio-box {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 105px;
+    left: 50%;
+
+    transform: translate(-50%);
+    background-repeat: no-repeat;
+  }
+
+  input[type='radio']:hover ~ .radio-box__field,
+  input[type='radio']:focus ~ .radio-box__field {
+    border-color: #d5c9bd;
+  }
+
+  input[type='radio']:focus ~ .radio-box__field {
+    box-shadow:
+ 0 0 6px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.12);
+  }
+
+  input[type='radio']:active:not(:checked) ~ .radio-box__field {
+    animation: heartBeat 0.5s e('in-out-cubic') forwards;
+    background-color: #d5c9bd;
+  }
+
+  input[type='radio']:active:checked ~ .radio-box__field {
+    background-color: #d5c9bd;
+  }
+
+  input[type='radio']:active ~ .radio-box__field::before {
+    border-color: #d5c9bd;
+    opacity: 1;
+  }
+
+  input[type='radio']:checked ~ .radio-box__field::before {
+    opacity: 1;
+  }
+
+  input[type='radio']:hover:checked ~ .radio-box__field::before {
+    border-color: #d5c9bd;
+  }
+
+  input[type='radio']:active:checked ~ .radio-box__field::before {
+    z-index: -1;
+  }
+
+  @include modifier(beard-1) {
+    &::after {
+      @include svg-color($beard-1, $primary);
+
+      width: 52px;
+      height: 49px;
+    }
+  }
+
+  @include modifier(beard-2) {
+    &::after {
+      @include svg-color($beard-2, $primary);
+
+      width: 58px;
+      height: 68px;
+    }
+  }
+
+  @include modifier(beard-3) {
+    &::after {
+      @include svg-color($beard-3, $primary);
+
+      width: 64px;
+      height: 78px;
+    }
+  }
+
+  @include modifier(beard-4) {
+    &::after {
+      @include svg-color($beard-4, $primary);
+
+      width: 58px;
+      height: 98px;
+    }
+  }
+
+  @include modifier(beard-5) {
+    &::after {
+      @include svg-color($beard-5, $primary);
+
+      width: 46px;
+      height: 105px;
+    }
+  }
+
+  @include element(field) {
+    display: block;
+    position: relative;
+
+    width: 52px;
+    height: 52px;
+
+    margin-bottom: rem(16px);
+    border: 1px solid #e5ddd5;
+
+    transition: all 0.25s e('out-cubic');
+    cursor: pointer;
+
+    border-radius: 50%;
+    background-color: #fff;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 18px;
+      height: 18px;
+      border: 1px solid #e5ddd5;
+
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      transition: all 0.2s e('out-cubic');
+      cursor: pointer;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  }
+
+  @include element(label) {
+    line-height: calc(24 / 18);
+
+    @include break('m') {
+      font-size: rem(24px);
+      line-height: 1;
+    }
+  }
+}

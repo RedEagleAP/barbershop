@@ -1,0 +1,56 @@
+.support {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+
+  .checkbox-box__field {
+    width: 32px;
+    height: 32px;
+
+    margin-right: rem(16px);
+  }
+
+  .checkbox-box__label {
+    @include break('m') {
+      font-size: rem(18px);
+      line-height: calc(30 / 18);
+    }
+  }
+
+  @include element(forgot-link) {
+    position: relative;
+    color: #000;
+    line-height: calc(30 / 18);
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 4px;
+      left: 0;
+      height: 2px;
+
+      transform: scaleX(1);
+      transition: transform 0.3s ease-in-out;
+
+      background-color: #000;
+      transform-origin: bottom left;
+    }
+
+    &:hover::before {
+      transform: scaleX(0);
+      transform-origin: bottom right;
+    }
+
+    &:hover {
+      color: #000;
+    }
+
+    &:active {
+      color: rgba(#000, 0.6);
+    }
+  }
+}

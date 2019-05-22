@@ -1,0 +1,158 @@
+/*
+ |--------------------------------------------------------------------------
+ |  .reviews
+ |--------------------------------------------------------------------------
+ */
+
+.reviews {
+  background-color: #f8f5f2;
+
+  @include element(wrapper) {
+    padding: rem(30px) 0 rem(70px);
+
+    @include break('m') {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @include break('l') {
+      padding: rem(36px) 0 rem(98px);
+    }
+  }
+
+  @include element(title) {
+    margin-bottom: rem(32px);
+
+    color: #000;
+    font-size: rem(30px);
+    line-height: 1;
+    text-align: center;
+
+    @include break('m') {
+      margin-top: rem(3px);
+      margin-bottom: 0;
+      font-size: rem(40px);
+    }
+  }
+
+  @include element(write) {
+    display: none;
+
+    @include break('m') {
+      display: inline-block;
+      margin-left: auto;
+    }
+  }
+
+  @include element(item) {
+    margin-bottom: 0;
+  }
+
+  @include element(item-wrap) {
+    display: flex;
+    margin-bottom: 0;
+
+    @include break('m') {
+      width: calc(100% * (542 / 640));
+      margin: 0 auto;
+      margin-top: rem(36px);
+      padding: rem(32px) 0;
+      border: 1px solid #edddd5;
+    }
+
+    @include break('l') {
+      height: 160px;
+      padding: 0;
+    }
+  }
+
+  @include element(author-picture) {
+    margin-top: rem(10px);
+    margin-right: rem(20px);
+    margin-bottom: 0;
+
+    @include break('m') {
+      margin-top: rem(6px);
+      margin-right: rem(25px);
+      margin-left: rem(32px);
+    }
+
+    @include break('l') {
+      margin: 0;
+      margin-right: rem(70px);
+    }
+  }
+
+  @include element(author-image) {
+    width: 50px;
+    max-width: none;
+    height: 48px;
+
+    @include break('m') {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    @include break('l') {
+      width: 250px;
+      height: 160px;
+      border-radius: 0;
+      object-fit: none;
+    }
+  }
+
+  @include element(text-wrap) {
+    text-align: left;
+
+    @include break('l') {
+      padding-top: rem(32px);
+    }
+  }
+
+  @include element(author-name) {
+    color: #000;
+    font-size: rem(24px);
+    line-height: (27/24);
+    font-weight: 700;
+    font-style: normal;
+
+    &::before {
+      content: '';
+    }
+  }
+
+  @include element(text) {
+    color: #000;
+    font-style: normal;
+  }
+
+  @include element(prev) {
+    display: none;
+
+    &:focus {
+      box-shadow: none;
+      outline: 0.1em solid rgba(3, 102, 214, .4);
+      outline-offset: -2px;
+    }
+
+    @include break('m') {
+      display: block;
+    }
+  }
+
+  @include element(next) {
+    display: none;
+
+    &:focus {
+      box-shadow: none;
+      outline: 0.1em solid rgba(3, 102, 214, .4);
+      outline-offset: -2px;
+    }
+
+    @include break('m') {
+      display: block;
+    }
+  }
+}

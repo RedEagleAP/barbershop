@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="ru" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Барбершоп Бородинский</title>
+
+  <meta name="description"
+    content="Личный проект «Барбершоп», выполненный в рамках пройденного онлайн‑курса «Продвинутый HTML и CSS» от HTML Academy.">
+  <meta name="msapplication-config" content="browserconfig.xml">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="google" content="nositelinkssearchbox">
+  <meta name="google" content="notranslate">
+
+  <link href="assets/img/bitmaps/back-tablet.webp" rel="preload" type="image/webp"
+    media="(min-width: 768px) and (max-width: 1199px) and (min-resolution: 96dpi)" as="image">
+  <link href="assets/img/bitmaps/back-tablet@2x.webp" rel="preload" type="image/webp"
+    media="(min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi)" as="image">
+  <link href="assets/img/bitmaps/back-desktop.webp" rel="preload" type="image/webp"
+    media="(min-width: 1200px) and (min-resolution: 96dpi)" as="image">
+  <link href="assets/img/bitmaps/back-desktop@2x.webp" rel="preload" type="image/webp"
+    media="(min-width: 1200px) and (min-resolution: 192dpi)" as="image">
+
+  <link href="manifest.json" rel="manifest">
+  <link href="manifest.webapp" rel="manifest">
+  <link href="favicon.png" rel="icon" type="image/png" sizes="32x32">
+  <link href="apple-touch-icon.png" rel="apple-touch-icon" type="image/png"
+    sizes="180x180">
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#8E6149">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#8E6149">
+
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style"
+    content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="PWA Barbershop">
+
+  <!-- To WebP or not to WebP. That is the question.
+      https://github.com/ai/webp-in-css#readme -->
+  <script>
+    var i = new Image;
+    i.onload = i.onerror = function() {
+      document.body.classList.add(i.height ? "webp" : "no-webp")
+    };
+    i.src =
+      "data:image/webp;base64,UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==";
+  </script>
+
+  <link
+    href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic"
+    rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="page">
+  <header class="page-header">
+    <div class="o-section">
+      <div class="o-row">
+        <div class="o-col-4 o-col-m-4 o-col-max-6 order-1">
+          <a class="page-header__logo">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="images/logo-desktop.svg">
+              <source media="(min-width: 768px)"
+                srcset="images/logo-tablet.svg">
+              <img src="images/logo-mobile.svg" width="226" height="30"
+                alt="Барбершоп «Бородинский»">
+            </picture>
+          </a>
+        </div>
+        <div class="o-col-4 o-col-m-4 o-col-max-6">
+          <nav class="main-nav main-nav--closed main-nav--nojs">
+            <button class="main-nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__list site-list">
+                <li class="site-list__item site-list__item--active">
+                  <a>Главная</a>
+                </li>
+                <li class="site-list__item">
+                  <a href="photo.html">Наши работы</a>
+                </li>
+                <li class="site-list__item">
+                  <a href="form.html">Записаться</a>
+                </li>
+                <li class="site-list__item">
+                  <a href="#">Контакты</a>
+                </li>
+                <li class="site-list__item">
+                  <a href="#">HTML Academy</a>
+                </li>
+              </ul>
+              <ul class="main-nav__list user-list">
+                <li class="user-list__item">
+                  <a class="user-list__login" href="login.html">Войти</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-main">
+
+    <h1 class="visually-hidden">Барбершоп «Бородинский» – истинно мужская
+      классика</h1>
+
+    <section class="stats">
+      <div class="o-section">
+        <div class="o-row">
+          <div class="o-col-4 o-col-m-4 o-col-max-2">
+            <header class="stats__header">
+              <h2 class="visually-hidden">Статистика Барбершопа</h2>
+              <b class="stats__slogan">Стрижка у&nbsp;нас<br>
+                это&nbsp;выгодно!</b>
+              <p class="stats__intro">Мужская стрижка требует точного подхода.
+                Обратимся к&nbsp;статистике:</p>
+              <small class="stats__legend stats__legend--top">
+                <sup>*</sup> &mdash; приведённые данные ложь
+              </small>
+            </header>
+          </div>
+          <div class="o-col-4 o-col-m-4 o-col-max-4">
+            <table class="stats__list">
+              <tr>
+                <td class="stats__value">
+                  1&thinsp;500<sup>*</sup>
+                </td>
+                <td class="stats__field">
+                  рублей<br>&#32;вложений
+                  <!-- &#32; - пробел(просто пробел...) -->
+                </td>
+              </tr>
+              <tr>
+                <td class="stats__value">
+                  7&thinsp;200
+                </td>
+                <td class="stats__field">
+                  секунд<br>&#32;времени мастера
+                </td>
+              </tr>
+              <tr>
+                <td class="stats__value">
+                  90&thinsp;000
+                </td>
+                <td class="stats__field">
+                  постриженных<br>&#32;волос
+                </td>
+              </tr>
+              <tr>
+                <td class="stats__value">
+                  500&thinsp;000<sup>*</sup>
+                </td>
+                <td class="stats__field">
+                  лайков<br>&#32;и&nbsp;комплиментов
+                </td>
+              </tr>
+            </table>
+            <small class="stats__legend stats__legend--bottom">
+              <sup>*</sup> &mdash; приведённые данные ложь
+            </small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="advantages features">
+      <div class="o-section">
+        <div class="o-row">
+          <div class="o-col-4 o-col-m-4 o-col-max-6">
+            <div class="advantages__wrapper">
+              <h2 class="visually-hidden">Наши преимущества</h2>
+              <ul class="advantages__list">
+                <li class="advantages__item advantages__item--fast">
+                  <h3 class="advantages__title">Быстро</h3>
+                  <p class="advantages__description">Мы&nbsp;делаем свою работу
+                    быстро!
+                    Два часа пролетят незаметно и&nbsp;вы &mdash;
+                    счастливый обладатель стильной стрижки-минутки.</p>
+                </li>
+                <li class="advantages__item advantages__item--cool">
+                  <h3 class="advantages__title">Круто</h3>
+                  <p class="advantages__description">Забудьте, как
+                    вы&nbsp;стриглись
+                    раньше. Мы&nbsp;сделаем из&nbsp;вас звезду футбола
+                    или кино. Во&nbsp;всяком случае внешне.</p>
+                </li>
+                <li class="advantages__item advantages__item--price">
+                  <h3 class="advantages__title">Дорого</h3>
+                  <p class="advantages__description">Наши мастера&nbsp;&mdash;
+                    профессионалы
+                    своего дела и&nbsp;не&nbsp;могут стоить дёшево.
+                    К&nbsp;тому&nbsp;же, разве цена не&nbsp;даёт определённый
+                    статус?</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="advantages slider">
+      <div class="o-section">
+        <div class="o-row">
+          <div class="o-col-4 o-col-m-4 o-col-max-6">
+            <h2 class="visually-hidden">Наши преимущества</h2>
+            <div class="advantages__wrapper swiper-container">
+              <div class="advantages__list swiper-wrapper">
+                <div
+                  class="advantages__item advantages__item--fast swiper-slide">
+                  <h3 class="advantages__title">Быстро</h3>
+                  <p class="advantages__description">Мы&nbsp;делаем свою работу
+                    быстро!
+                    Два часа пролетят незаметно и&nbsp;вы &mdash;
+                    счастливый обладатель стильной стрижки-минутки.</p>
+                </div>
+                <div
+                  class="advantages__item advantages__item--cool swiper-slide">
+                  <h3 class="advantages__title">Круто</h3>
+                  <p class="advantages__description">Забудьте, как
+                    вы&nbsp;стриглись
+                    раньше. Мы&nbsp;сделаем из&nbsp;вас звезду футбола
+                    или кино. Во&nbsp;всяком случае внешне.</p>
+                </div>
+                <div
+                  class="advantages__item advantages__item--price swiper-slide">
+                  <h3 class="advantages__title">Дорого</h3>
+                  <p class="advantages__description">Наши мастера&nbsp;&mdash;
+                    профессионалы
+                    своего дела и&nbsp;не&nbsp;могут стоить дёшево.
+                    К&nbsp;тому&nbsp;же, разве цена не&nbsp;даёт определённый
+                    статус?</p>
+                </div>
+              </div>
+              <div class="advantages__toggles swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="news">
+      <div class="o-section">
+        <div class="o-row">
+          <div class="o-col-4 o-col-m-4 o-col-max-6">
+            <div class="news__wrapper">
+              <h2 class="news__title">Новости и&nbsp;акции</h2>
+              <ul class="news__list">
+                <li class="news__item">
+                  <a class="news__link" href="#">
+                    <time class="news__date" datetime="2017-09-29">
+                      <b class="news__day">29</b>сент
+                    </time>
+                    <p class="news__text">Нам наконец-то завезли Егермейстер!
+                      Теперь вы&nbsp;можете
+                      пропустить стаканчик во&nbsp;время стрижки.</p>
+                  </a>
+                </li>
+                <li class="news__item">
+                  <a class="news__link" href="#">
+                    <time class="news__date" datetime="2017-09-19">
+                      <b class="news__day">19</b>сент
+                    </time>
+                    <p class="news__text">В&nbsp;нашей команде пополнение, Борис
+                      &laquo;Бритва&raquo;
+                      Стригунец, обладатель множества титулов и&nbsp;наград
+                      пополнил наши стройные
+                      ряды. Спешите записаться!</p>
+                  </a>
+                </li>
+                <li class="news__item">
+                  <a class="news__link" href="#">
+                    <time class="news__date" datetime="2017-09-09">
+                      <b class="news__day">9</b>сент
+                    </time>
+                    <p class="news__text">Всё дорожает, а&nbsp;наши стрижки нет!
+                      Как так? Приходите,
+                      постригитесь и&nbsp;узнаете, в&nbsp;чём здесь подвох!</p>
+                  </a>
+                </li>
+              </ul>
+              <a class="news__to-all button button--wide" href="#">Показать
+                все</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="o-section">
+        <div class="o-row">
+          <div class="o-col-4 o-col-m-4 o-col-max-6">
+            <div class="reviews__wrapper swiper-container">
+              <h2 class="reviews__title">Отзывы о&nbsp;нас</h2>
+              <a class="reviews__write button" href="#">Оставить свой</a>
+              <div class="reviews__list  swiper-wrapper">
+                <blockquote class="reviews__item  swiper-slide">
+                  <div class="reviews__item-wrap">
+                    <p class="reviews__author-picture">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)"
+                          srcset="images/travis-desktop.webp 1x, images/travis-desktop@2x.webp 2x">
+                        <source media="(min-width: 768px)"
+                          srcset="images/travis-desktop.jpg 1x, images/travis-desktop@2x.jpg 2x">
+                        <source type="image/webp"
+                          srcset="images/travis-mobile.webp 1x, images/travis-mobile@2x.webp 2x">
+                        <img class="reviews__author-image" data-zoomable
+                          src="images/travis-mobile.jpg"
+                          alt="Фото Трэвиса Баркера"
+                          srcset="images/travis-mobile@2x.jpg 2x">
+                      </picture>
+                    </p>
+                    <div class="reviews__text-wrap">
+                      <cite class="reviews__author-name">Трэвис Баркер</cite>
+                      <p class="reviews__text">Спасибо за&nbsp;лысину! Был
+                        проездом в&nbsp;Москве,
+                        заскочил побриться, чтобы было видно новую татуировку!
+                      </p>
+                    </div>
+                  </div>
+                </blockquote>
+                <blockquote class="reviews__item  swiper-slide">
+                  <div class="reviews__item-wrap">
+                    <p class="reviews__author-picture">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)"
+                          srcset="images/travis-desktop.webp 1x, images/travis-desktop@2x.webp 2x">
+                        <source media="(min-width: 768px)"
+                          srcset="images/travis-desktop.jpg 1x, images/travis-desktop@2x.jpg 2x">
+                        <source type="image/webp"
+                          srcset="images/travis-mobile.webp 1x, images/travis-mobile@2x.webp 2x">
+                        <img class="reviews__author-image" data-zoomable
+                          src="images/travis-mobile.jpg" alt="Фото Джона Смита"
+                          srcset="images/travis-mobile@2x.jpg 2x">
+                      </picture>
+                    </p>
+                    <div class="reviews__text-wrap">
+                      <cite class="reviews__author-name">Джон Смит</cite>
+                      <p class="reviews__text">Отличную стрижку мне сделали
+                        ребята.
+                      </p>
+                    </div>
+                  </div>
+                </blockquote>
+                <blockquote class="reviews__item  swiper-slide">
+                  <div class="reviews__item-wrap">
+                    <p class="reviews__author-picture">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)"
+                          srcset="images/travis-desktop.webp 1x, images/travis-desktop@2x.webp 2x">
+                        <source media="(min-width: 768px)"
+                          srcset="images/travis-desktop.jpg 1x, images/travis-desktop@2x.jpg 2x">
+                        <source type="image/webp"
+                          srcset="images/travis-mobile.webp 1x, images/travis-mobile@2x.webp 2x">
+                        <img class="reviews__author-image" data-zoomable
+                          src="images/travis-mobile.jpg"
+                          alt="Фото Ивана Бородайло"
+                          srcset="images/travis-mobile@2x.jpg 2x">
+                      </picture>
+                    </p>
+                    <div class="reviews__text-wrap">
+                      <cite class="reviews__author-name">Иван Бородайло</cite>
+                      <p class="reviews__text">В&nbsp;Бородинском ваша борода
+                        в&nbsp;надёжных руках!
+                      </p>
+                    </div>
+                  </div>
+                </blockquote>
+              </div>
+              <div class="reviews__toggles swiper-pagination"></div>
+              <button class="reviews__prev swiper-button-prev" type="button">
+                <span class="visually-hidden">Предыдущий
+                  отзыв</span>
+                <span class="reviews__triangle"></span>
+              </button>
+              <button class="reviews__next swiper-button-next" type="button">
+                <span class="visually-hidden">Следующий
+                  отзыв</span>
+                <span class="reviews__triangle"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="o-section">
+      <div class="o-row">
+        <div class="o-col-4 o-col-m-2 o-col-max-2">
+          <div class="page-footer__contacts contacts">
+            <b class="contacts__title">Барбершоп &laquo;Бородинский&raquo;</b>
+            <p class="contacts__text">
+              г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
+              <a class="contacts__phone button button--dark button--wide"
+                href="tel:+78125556666">
+                <span class="contacts__phone-mobile">Тел.:</span> +7 (812)
+                555-66-66
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="o-col-4 o-col-m-4 o-col-max-2 order-1">
+          <div class="page-footer__social social">
+            <b class="social__title">Давайте дружить!</b>
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link social__link--vkontakte"
+                  href="https://vk.com/no_luck_just_sk1l"><span
+                    class="visually-hidden">Мы в
+                    Вконтакте</span></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--facebook"
+                  href="https://www.facebook.com/alex.prisyajnyk"><span
+                    class="visually-hidden">Мы в
+                    Фейсбуке</span></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--instagram"
+                  href="https://www.instagram.com/our_event_horizon"><span
+                    class="visually-hidden">Мы в
+                    Инстаграме</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="o-col-4 o-col-m-2 o-col-max-2">
+          <div class="page-footer__copyright copyright">
+            <b class="copyright__text">Разработано:</b>
+            <a class="button button--dark button--wide copyright__link"
+              href="https://htmlacademy.ru/intensive/adaptive">HTML
+              Academy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <section class="modal-login">
+    <h2 class="modal-login__title">Личный кабинет</h2>
+    <p class="modal-login__descr">Введите свой логин и пароль, чтобы войти</p>
+
+    <form class="modal-login__form" action="https://echo.htmlacademy.ru/" method="POST">
+      <div class="modal-login__user-info info-user">
+        <div class="info-user__field info-user__field--login input-box">
+          <input class="input-box__field" id="login-field" name="login-field" type="text" required>
+          <span class="input-box__border input-box__border--top"></span>
+          <span class="input-box__border input-box__border--right"></span>
+          <span class="input-box__border input-box__border--bottom"></span>
+          <span class="input-box__border input-box__border--left"></span>
+          <label class="input-box__label" for="login-field">Логин</label>
+        </div>
+        <div class="info-user__field info-user__field--password input-box">
+          <input class="input-box__field" id="password-field" name="password-field" type="password" required>
+          <span class="input-box__border input-box__border--top"></span>
+          <span class="input-box__border input-box__border--right"></span>
+          <span class="input-box__border input-box__border--bottom"></span>
+          <span class="input-box__border input-box__border--left"></span>
+          <label class="input-box__label" for="password-field">Пароль</label>
+        </div>
+      </div>
+
+      <div class="modal-login__support support">
+        <div class="support__field checkbox-box">
+          <label>
+            <input class="visually-hidden" id="support-field" name="support" type="checkbox">
+            <span class="checkbox-box__field"></span>
+          </label>
+          <label class="checkbox-box__label" for="support-field">Запомните меня</label>
+        </div>
+        <a class="support__forgot-link" href="#">Я забыл пароль!</a>
+      </div>
+
+      <div class="modal-login__send-form form-send">
+        <button class="form-send__button button button--fill" id="form-send-btn" type="submit">Войти</button>
+        <button class="form-send__button button" id="form-close-btn" type="button">Закрыть</button>
+      </div>
+
+      <button class="modal-login__send-button button button--fill button--wide" type="submit">Войти в личный кабинет</button>
+      <button class="modal-login__close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
+    </form>
+  </section>
+
+  <script src="assets/js/swiper.min.js"></script>
+  <script>
+    var mySwiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      speed: 800,
+      a11y: {
+      enabled: true,
+      },
+      keyboard: {
+        enabled: true,
+      },
+      autoplay: {
+        delay: 7000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+
+</html>

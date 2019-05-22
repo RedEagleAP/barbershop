@@ -1,0 +1,68 @@
+.info-user {
+  width: 100%;
+
+  .input-box__field {
+    padding-right: rem(40px);
+
+    @include break('m') {
+      padding-right: rem(50px);
+    }
+  }
+
+  @include element(field) {
+    width: 100%;
+    max-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 19px;
+
+      width: 16px;
+      height: 16px;
+
+      transform: translateY(-50%);
+      pointer-events: none;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+
+    @include break('m') {
+      margin-bottom: 6px;
+
+      &::after {
+        right: 25px;
+      }
+    }
+
+    @include modifier(login) {
+      &::after {
+        @include svg-color($input-user, #000);
+
+        width: 18px;
+        height: 24px;
+
+        transform: translateY(-40%);
+
+        @include break('m') {
+          width: 20px;
+          height: 26px;
+        }
+      }
+    }
+
+    @include modifier(password) {
+      &::after {
+        @include svg-color($input-locked, #000);
+
+        @include break('m') {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+}

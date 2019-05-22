@@ -1,0 +1,76 @@
+/*
+ |--------------------------------------------------------------------------
+ | .booking-form
+ |--------------------------------------------------------------------------
+ */
+
+.booking-form {
+  padding-bottom: rem(72px);
+
+  @include element(bio) {
+    margin-bottom: rem(32px);
+
+    @include break('m') {
+      display: flex;
+      margin-bottom: rem(35px);
+
+      .input-box {
+        width: calc(100% / 3);
+      }
+    }
+
+    @include break('l') {
+      justify-content: space-between;
+
+      .input-box {
+        width: 295px;
+      }
+    }
+  }
+
+  @include element(relations) {
+    margin-bottom: rem(32px);
+
+    @include break('m') {
+      margin-bottom: rem(35px);
+
+      .input-box {
+        margin-bottom: rem(35px);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    @include break('l') {
+      display: flex;
+      justify-content: space-between;
+
+      .input-box {
+        width: calc(50% - 17.5px);
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include element(feedback) {
+    margin-bottom: rem(38px);
+
+    @include break('m') {
+      margin-bottom: rem(56px);
+    }
+
+    @include break('l') {
+      margin-bottom: rem(72px);
+    }
+  }
+
+  @include element(button) {
+
+    @include break('m') {
+      font-size: rem(24px);
+      line-height: calc(30 / 24);
+    }
+  }
+}

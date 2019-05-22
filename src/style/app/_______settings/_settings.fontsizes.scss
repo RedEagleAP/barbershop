@@ -1,0 +1,25 @@
+// ==========================================================================
+//   Font Sizes
+// ==========================================================================
+
+// Dependencies
+@import '../../../../node_modules/modularscale-sass/stylesheets/modularscale';
+
+// Settings
+$mw-baseFontSizePx: 18px;
+$mw-baseFontSizeMaxPx: 18px;
+$mw-baseLineHeight: 1.5;
+
+// Modular Scale Settings
+$modularscale: (
+        base: $mw-baseFontSizePx,
+        ratio: $major-second,
+        $bk-minWidth: (
+                base: $mw-baseFontSizePx,
+                ratio: $major-second,
+        ),
+        $bk-maxWidth:  (
+                base: $mw-baseFontSizeMaxPx,
+                ratio: $fourth,
+        )
+);

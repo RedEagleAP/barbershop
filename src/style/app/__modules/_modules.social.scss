@@ -1,0 +1,119 @@
+/*
+ |--------------------------------------------------------------------------
+ | .social
+ |--------------------------------------------------------------------------
+ */
+
+.social {
+  margin-bottom: rem(30px);
+
+  @include break('m') {
+    margin-bottom: 0;
+  }
+
+  @include break('l') {
+    text-align: center;
+  }
+
+  @include element(title) {
+    @include break(1198px, max) {
+      display: none;
+    }
+
+    @include break('l') {
+      display: inline-block;
+      margin-bottom: rem(10px);
+    }
+  }
+
+  @include element(list) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
+    padding: 0;
+    list-style: none;
+
+    @include break('m') {
+      width: 100%;
+      margin: 0;
+    }
+
+    @include break('l') {
+      justify-content: center;
+    }
+  }
+
+  @include element(item) {
+    width: 33.33333%;
+    height: 101px;
+
+    @include break('l') {
+      width: 50px;
+      height: 50px;
+      margin-right: rem(6px);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @include element(link) {
+    display: block;
+    height: 101px;
+    border: 1px solid #3f3f3f;
+    background-color: transparent;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    &:hover,
+    &:focus {
+      border-color: #545454;
+    }
+
+    &:active {
+      border-color: #252525;
+      opacity: 0.3;
+      background-color: #252525;
+    }
+
+    @include modifier('vkontakte') {
+      @include svg-color($social-vk, #fff);
+
+      background-size: 33px 36px;
+
+      @include break('l') {
+        background-size: 23px 26px;
+      }
+    }
+
+    @include modifier('facebook') {
+      @include svg-color($social-fb, #fff);
+
+      background-size: 18px 38px;
+
+      @include break('l') {
+        background-size: 10px 30px;
+      }
+    }
+
+    @include modifier('instagram') {
+      @include svg-color($social-insta, #fff);
+
+      background-size: 56px 56px;
+
+      @include break('l') {
+        background-size: 36px 36px;
+      }
+    }
+
+    @include break('l') {
+      height: 50px;
+
+      &:hover {
+        animation: rubberBand 1s;
+      }
+    }
+  }
+}
