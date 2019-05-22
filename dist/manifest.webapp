@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "name": "barbershop",
+  "description": "Личный проект «Барбершоп», выполненный в рамках пройденного онлайн‑курса «Продвинутый HTML и CSS» от HTML Academy.",
+  "icons": {
+    "60": "/assets/img/system/firefox_app_60x60.png",
+    "128": "/assets/img/system/firefox_app_128x128.png",
+    "512": "/assets/img/system/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": "Alexander Prisyazhnyuk",
+    "url": "https://github.com/RedEagleAP"
+  }
+}
