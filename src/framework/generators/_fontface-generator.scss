@@ -49,6 +49,7 @@
             filename: map-get($style,filename),
             weight: map-get($style,weight),
             style: map-get($style,style),
+            display: map-get($style,display),
             short: map-get($style,short)
           )
         );

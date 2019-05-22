@@ -11,6 +11,7 @@
 /// @param  {string} $o.name [false]    - Desired filename, otherwise use the Fontname
 /// @param  {string} $o.weight [normal] - Fontweight
 /// @param  {string} $o.style [normal]  - Fontstyle
+/// @param  {string} $o.style [swap]    - FontDisplay
 /// @param  {bool}   $o.short [true]    - Use the Short Fontface Declaration
 ///
 /// @example scss - scss
@@ -28,6 +29,7 @@
 ///          url("../fonts/arial.woff") format("woff");
 ///     font-weight: normal;
 ///     font-style: normal;
+///     font-display: swap;
 ///   }
 ///
 ///   @font-face {
@@ -39,6 +41,7 @@
 ///          url("../fonts/myVerdana.svg#myVerdana") format("svg");
 ///     font-weight: normal;
 ///     font-style: normal;
+///     font-display: swap;
 ///   }
 @mixin fontface($fontname, $o: ()) {
 
@@ -47,6 +50,7 @@
     filename: false,
     weight: normal,
     style: normal,
+    display: swap,
     short: true
   ),$o);
 
@@ -60,7 +64,8 @@
       src: url('#{map-get($meow-directories, fonts)}#{$filename}.woff2') format('woff2'),
            url('#{map-get($meow-directories, fonts)}#{$filename}.woff') format('woff');
       font-weight : map-get($o, weight);
-      font-style  : map-get($o, style); }
+      font-style  : map-get($o, style);
+      font-display: map-get($o, display); }
 
   } @else {
     @font-face {
@@ -71,6 +76,7 @@
            url('#{map-get($meow-directories, fonts)}#{$filename}.ttf') format('truetype'),
            url('#{map-get($meow-directories, fonts)}#{$filename}.svg##{$fontname}') format('svg');
       font-weight : map-get($o, weight);
-      font-style  : map-get($o, style); }
+      font-style  : map-get($o, style);
+      font-display: map-get($o, display); }
   }
 }
