@@ -57,31 +57,31 @@
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body class="page">
+<body class="page" aria-label="Главная">
   <header class="page-header">
     <div class="o-section">
       <div class="o-row">
-        <div class="o-col-4 o-col-m-4 o-col-max-6 order-1">
+        <div class="o-col-4 o-col-m-4 o-col-max-6 order-1" aria-label="Контейнер для логотипа">
           <a class="page-header__logo">
-            <picture>
+            <picture aria-label="Изображение логотипа Барбершопа">
               <source media="(min-width: 1200px)"
                 srcset="images/logo-desktop.svg">
               <source media="(min-width: 768px)"
                 srcset="images/logo-tablet.svg">
               <img src="images/logo-mobile.svg" width="226" height="30"
-                alt="Барбершоп «Бородинский»">
+                alt="Барбершоп «Бородинский»" role="img">
             </picture>
           </a>
         </div>
-        <div class="o-col-4 o-col-m-4 o-col-max-6">
+        <div class="o-col-4 o-col-m-4 o-col-max-6" aria-label="Контейнер для главного меню">
           <nav class="main-nav main-nav--closed main-nav--nojs">
             <button class="main-nav__toggle" type="button">
               <span class="visually-hidden">Открыть меню</span>
             </button>
-            <div class="main-nav__wrapper">
-              <ul class="main-nav__list site-list">
+            <div class="main-nav__wrapper" aria-label="Навигация">
+              <ul class="main-nav__list site-list" aria-label="Навигация по страницам сайта">
                 <li class="site-list__item site-list__item--active">
-                  <a>Главная</a>
+                  <a aria-current="page">Главная</a>
                 </li>
                 <li class="site-list__item">
                   <a href="photo.html">Наши работы</a>
@@ -96,7 +96,7 @@
                   <a href="#">HTML Academy</a>
                 </li>
               </ul>
-              <ul class="main-nav__list user-list">
+              <ul class="main-nav__list user-list" aria-label="Открыть форму входа">
                 <li class="user-list__item">
                   <a class="user-list__login" href="login.html">Войти</a>
                 </li>
@@ -113,7 +113,7 @@
     <h1 class="visually-hidden">Барбершоп «Бородинский» – истинно мужская
       классика</h1>
 
-    <section class="stats">
+    <section class="stats" aria-label="Статистика">
       <div class="o-section">
         <div class="o-row">
           <div class="o-col-4 o-col-m-4 o-col-max-2">
@@ -172,7 +172,7 @@
       </div>
     </section>
 
-    <section class="advantages features">
+    <section class="advantages features" aria-label="Приемущества">
       <div class="o-section">
         <div class="o-row">
           <div class="o-col-4 o-col-m-4 o-col-max-6">
@@ -208,7 +208,7 @@
       </div>
     </section>
 
-    <section class="advantages slider">
+    <section class="advantages slider" aria-label="Приемущества">
       <div class="o-section">
         <div class="o-row">
           <div class="o-col-4 o-col-m-4 o-col-max-6">
@@ -248,7 +248,7 @@
       </div>
     </section>
 
-    <section class="news">
+    <section class="news" aria-label="Новости">
       <div class="o-section">
         <div class="o-row">
           <div class="o-col-4 o-col-m-4 o-col-max-6">
@@ -296,7 +296,7 @@
       </div>
     </section>
 
-    <section class="reviews">
+    <section class="reviews" aria-label="Отзывы">
       <div class="o-section">
         <div class="o-row">
           <div class="o-col-4 o-col-m-4 o-col-max-6">
@@ -398,9 +398,9 @@
   <footer class="page-footer">
     <div class="o-section">
       <div class="o-row">
-        <div class="o-col-4 o-col-m-2 o-col-max-2">
-          <div class="page-footer__contacts contacts">
-            <b class="contacts__title">Барбершоп &laquo;Бородинский&raquo;</b>
+        <div class="o-col-4 o-col-m-2 o-col-max-2" aria-label="Контакты">
+          <div class="page-footer__contacts contacts" aria-label="Содержание блока: Контакты">
+            <b class="contacts__title" aria-label="Барбершоп 'Бородинский'">Барбершоп &laquo;Бородинский&raquo;</b>
             <p class="contacts__text">
               г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
               <a class="contacts__phone button button--dark button--wide"
@@ -411,10 +411,10 @@
             </p>
           </div>
         </div>
-        <div class="o-col-4 o-col-m-4 o-col-max-2 order-1">
+        <div class="o-col-4 o-col-m-4 o-col-max-2 order-1" aria-label="Ссылки на Соц.сети">
           <!-- Секция с социальными ссылками изменена в названии. С social на liberal(kappa). В связи с тем, что github скрывает все блоки с таким названием -->
-          <div class="page-footer__liberal liberal">
-            <b class="liberal__title">Давайте дружить!</b>
+          <div class="page-footer__liberal liberal" aria-label="Содержание блока: Ссылки на Соц.сети">
+            <b class="liberal__title" aria-label="Давайте дружить!">Давайте дружить!</b>
             <ul class="liberal__list">
               <li class="liberal__item">
                 <a class="liberal__link liberal__link--vkontakte"
@@ -437,9 +437,9 @@
             </ul>
           </div>
         </div>
-        <div class="o-col-4 o-col-m-2 o-col-max-2">
-          <div class="page-footer__copyright copyright">
-            <b class="copyright__text">Разработано:</b>
+        <div class="o-col-4 o-col-m-2 o-col-max-2" aria-label="Авторские права">
+          <div class="page-footer__copyright copyright" aria-label="Содержание блока: Авторские права">
+            <b class="copyright__text" aria-label="Разработано:">Разработано:</b>
             <a class="button button--dark button--wide copyright__link"
               href="https://htmlacademy.ru/intensive/adaptive">HTML
               Academy</a>
@@ -449,13 +449,13 @@
     </div>
   </footer>
 
-  <section class="modal-login">
+  <section class="modal-login" aria-modal="true" aria-label="Форма входа">
     <h2 class="modal-login__title">Личный кабинет</h2>
     <p class="modal-login__descr">Введите свой логин и пароль, чтобы войти</p>
 
     <form class="modal-login__form" action="https://echo.htmlacademy.ru/" method="POST">
       <div class="modal-login__user-info info-user">
-        <div class="info-user__field info-user__field--login input-box">
+        <div class="info-user__field info-user__field--login input-box" aria-label="Поле для ввода Логина">
           <input class="input-box__field" id="login-field" name="login-field" type="text" required>
           <span class="input-box__border input-box__border--top"></span>
           <span class="input-box__border input-box__border--right"></span>
@@ -463,7 +463,7 @@
           <span class="input-box__border input-box__border--left"></span>
           <label class="input-box__label" for="login-field">Логин</label>
         </div>
-        <div class="info-user__field info-user__field--password input-box">
+        <div class="info-user__field info-user__field--password input-box" aria-label="Поле для ввода Пароля">
           <input class="input-box__field" id="password-field" name="password-field" type="password" required>
           <span class="input-box__border input-box__border--top"></span>
           <span class="input-box__border input-box__border--right"></span>
@@ -474,7 +474,7 @@
       </div>
 
       <div class="modal-login__support support">
-        <div class="support__field checkbox-box">
+        <div class="support__field checkbox-box" aria-label="Чекбокс Запомните меня">
           <label>
             <input class="visually-hidden" id="support-field" name="support" type="checkbox">
             <span class="checkbox-box__field"></span>

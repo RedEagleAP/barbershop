@@ -54,26 +54,26 @@
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body class="page--inner">
+<body class="page--inner" aria-label="Записаться">
   <header class="page-header">
     <div class="o-section">
       <div class="o-row">
-        <div class="o-col-4 o-col-m-4 o-col-max-6 order-1">
+        <div class="o-col-4 o-col-m-4 o-col-max-6 order-1" aria-label="Контейнер для логотипа">
           <a class="page-header__logo" href="index.html">
-            <picture>
+            <picture aria-label="Изображение логотипа Барбершопа">
               <source media="(min-width: 1200px)" srcset="images/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="images/logo-tablet.svg">
               <img src="images/logo-mobile.svg" width="226" height="30"
-                alt="Барбершоп «Бородинский»">
+                alt="Барбершоп «Бородинский»" role="img">
             </picture>
           </a>
         </div>
-        <div class="o-col-4 o-col-m-4 o-col-max-6">
+        <div class="o-col-4 o-col-m-4 o-col-max-6" aria-label="Контейнер для главного меню">
           <nav class="main-nav main-nav--closed main-nav--nojs">
             <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть
                 меню</span></button>
             <div class="main-nav__wrapper">
-              <ul class="main-nav__list site-list">
+              <ul class="main-nav__list site-list" aria-label="Навигация по страницам сайта">
                 <li class="site-list__item">
                   <a href="index.html">Главная</a>
                 </li>
@@ -81,7 +81,7 @@
                   <a href="photo.html">Наши работы</a>
                 </li>
                 <li class="site-list__item site-list__item--active">
-                  <a>Записаться</a>
+                  <a aria-current="page">Записаться</a>
                 </li>
                 <li class="site-list__item">
                   <a href="#">Контакты</a>
@@ -90,7 +90,7 @@
                   <a href="#">HTML Academy</a>
                 </li>
               </ul>
-              <ul class="main-nav__list user-list">
+              <ul class="main-nav__list user-list" aria-label="Открыть форму входа">
                 <li class="user-list__item">
                   <a class="user-list__login" href="login.html">Войти</a>
                 </li>
@@ -103,7 +103,7 @@
   </header>
 
   <main class="page-main page-main--inner">
-    <header class="page-title">
+    <header class="page-title" aria-label="Заголовок страницы">
       <div class="o-section">
         <div class="o-row">
           <div class="o-col-4 o-col-m-6 o-col-max-6">
@@ -116,15 +116,15 @@
       </div>
     </header>
 
-    <section class="booking-form">
+    <section class="booking-form" aria-label="Форма Заказа">
       <form class="booking-form__form" action="https://echo.htmlacademy.ru/" method="POST">
         <fildset class="booking-form__contacts">
           <legend class="visually-hidden">Личные данные</legend>
           <div class="o-section">
             <div class="o-row">
-              <div class="o-col-4 o-col-m-4 o-col-max-6">
+              <div class="o-col-4 o-col-m-4 o-col-max-6" aria-label="ФИО">
                 <div class="booking-form__bio">
-                  <div class="booking-form__field input-box">
+                  <div class="booking-form__field input-box" aria-label="Поле для ввода Фамилии">
                     <input class="input-box__field" id="surname-field" name="surname-field"
                       type="text" required>
                     <span class="input-box__border input-box__border--top"></span>
@@ -133,7 +133,7 @@
                     <span class="input-box__border input-box__border--left"></span>
                     <label class="input-box__label" for="surname-field">Фамилия</label>
                   </div>
-                  <div class="booking-form__field input-box">
+                  <div class="booking-form__field input-box" aria-label="Поле для ввода Имени">
                     <input class="input-box__field" id="name-field" name="name-field" type="text"
                       required>
                     <span class="input-box__border input-box__border--top"></span>
@@ -142,7 +142,7 @@
                     <span class="input-box__border input-box__border--left"></span>
                     <label class="input-box__label" for="name-field">Имя</label>
                   </div>
-                  <div class="booking-form__field input-box">
+                  <div class="booking-form__field input-box" aria-label="Поле для ввода Отчества">
                     <input class="input-box__field" id="patronymic-field" name="patronymic-field"
                       type="text" required>
                     <span class="input-box__border input-box__border--top"></span>
@@ -155,9 +155,9 @@
               </div>
             </div>
             <div class="o-row">
-              <div class="o-col-4 o-col-m-4 o-col-max-6">
+              <div class="o-col-4 o-col-m-4 o-col-max-6" aria-label="Ваши контактные данные">
                 <div class="booking-form__relations">
-                  <div class="booking-form__field input-box">
+                  <div class="booking-form__field input-box" aria-label="Поле для ввода Контактного телефона">
                     <input class="input-box__field" id="phone-field" name="phone-field" type="tel"
                       required>
                     <span class="input-box__border input-box__border--top"></span>
@@ -166,7 +166,7 @@
                     <span class="input-box__border input-box__border--left"></span>
                     <label class="input-box__label" for="phone-field">Контактный телефон</label>
                   </div>
-                  <div class="booking-form__field input-box">
+                  <div class="booking-form__field input-box" aria-label="Поле для ввода Контактного e-mail">
                     <input class="input-box__field" id="email-field" name="email-field" type="email"
                       required>
                     <span class="input-box__border input-box__border--top"></span>
@@ -179,8 +179,9 @@
               </div>
             </div>
             <div class="o-row">
-              <div class="o-col-4 o-col-m-4 o-col-max-6">
-                <div class="booking-form__feedback feedback-textarea">
+              <div class="o-col-4 o-col-m-4 o-col-max-6" aria-label="Обратная связь">
+                <div class="booking-form__feedback feedback-textarea" aria-label="Поле для ввода Доп. информации
+                    для мастера">
                   <textarea class="feedback-textarea__field" id="feedback-textarea" name="feedback" required></textarea>
                   <span class="feedback-textarea__border feedback-textarea__border--top"></span>
                   <span class="feedback-textarea__border feedback-textarea__border--right"></span>
@@ -197,12 +198,12 @@
         <fildset class="booking-form__beards beards-form">
           <div class="o-section">
             <div class="o-row">
-              <div class="o-col-4 o-col-m-4 o-col-max-6">
+              <div class="o-col-4 o-col-m-4 o-col-max-6" aria-label="Заголовок: Выберите модель бороды">
                 <legend class="booking-form-title">Выберите модель бороды:</legend>
               </div>
-              <div class="o-col-4 o-col-m-4 o-col-max-6">
+              <div class="o-col-4 o-col-m-4 o-col-max-6" aria-label="Выберите модель бороды:">
                 <div class="beards-form__radio">
-                  <div class="beards-form__field radio-box radio-box--beard-1">
+                  <div class="beards-form__field radio-box radio-box--beard-1" aria-label="адмирал">
                     <label>
                       <input class="visually-hidden" id="beard-field-1"
                         name="beard-field" type="radio" checked>
@@ -210,7 +211,7 @@
                     </label>
                     <label class="radio-box__label" for="beard-field-1">адмирал</label>
                   </div>
-                  <div class="beards-form__field radio-box radio-box--beard-2">
+                  <div class="beards-form__field radio-box radio-box--beard-2" aria-label="лесоруб">
                     <label>
                       <input class="visually-hidden" id="beard-field-2"
                         name="beard-field" type="radio">
@@ -218,7 +219,7 @@
                     </label>
                     <label class="radio-box__label" for="beard-field-2">лесоруб</label>
                   </div>
-                  <div class="beards-form__field radio-box radio-box--beard-3">
+                  <div class="beards-form__field radio-box radio-box--beard-3" aria-label="полярник">
                     <label>
                       <input class="visually-hidden" id="beard-field-3"
                         name="beard-field" type="radio">
@@ -226,7 +227,7 @@
                     </label>
                     <label class="radio-box__label" for="beard-field-3">полярник</label>
                   </div>
-                  <div class="beards-form__field radio-box radio-box--beard-4">
+                  <div class="beards-form__field radio-box radio-box--beard-4" aria-label="боярин">
                     <label>
                       <input class="visually-hidden" id="beard-field-4"
                         name="beard-field" type="radio">
@@ -234,7 +235,7 @@
                     </label>
                     <label class="radio-box__label" for="beard-field-4">боярин</label>
                   </div>
-                  <div class="beards-form__field radio-box radio-box--beard-5">
+                  <div class="beards-form__field radio-box radio-box--beard-5" aria-label="мудрец">
                     <label>
                       <input class="visually-hidden" id="beard-field-5"
                         name="beard-field" type="radio">
@@ -251,12 +252,13 @@
         <fildset class="booking-form__services additional-services">
           <div class="o-section">
             <div class="o-row">
-              <div class="o-col-4 o-col-m-4 o-col-max-6">
+              <div class="o-col-4 o-col-m-4 o-col-max-6" aria-label="Заголовок: Дополнительные услуги">
                 <legend class="booking-form-title">Дополнительные услуги:</legend>
               </div>
-              <div class="o-col-4 o-col-m-4 o-col-max-6">
+              <div class="o-col-4 o-col-m-4 o-col-max-6" aria-label="Дополнительные услуги:">
                 <div class="additional-services__checkbox">
-                  <div class="additional-services__field checkbox-box">
+                  <div class="additional-services__field checkbox-box" aria-label="Подкрасить
+                      бороду">
                     <label>
                       <input class="visually-hidden" id="services-field-1"
                         name="services-field-1" type="checkbox" checked>
@@ -265,7 +267,7 @@
                     <label class="checkbox-box__label" for="services-field-1">Подкрасить
                       бороду</label>
                   </div>
-                  <div class="additional-services__field checkbox-box">
+                  <div class="additional-services__field checkbox-box" aria-label="Накрутить усы">
                     <label>
                       <input class="visually-hidden" id="services-field-2"
                         name="services-field-2" type="checkbox" checked>
@@ -273,7 +275,8 @@
                     </label>
                     <label class="checkbox-box__label" for="services-field-2">Накрутить усы</label>
                   </div>
-                  <div class="additional-services__field checkbox-box">
+                  <div class="additional-services__field checkbox-box" aria-label="Причесать
+                      бороду">
                     <label>
                       <input class="visually-hidden" id="services-field-3"
                         name="services-field-3" type="checkbox">
@@ -282,7 +285,8 @@
                     <label class="checkbox-box__label" for="services-field-3">Причесать
                       бороду</label>
                   </div>
-                  <div class="additional-services__field checkbox-box">
+                  <div class="additional-services__field checkbox-box" aria-label="Подровнять
+                      виски">
                     <label>
                       <input class="visually-hidden" id="services-field-4"
                         name="services-field-4" type="checkbox">
@@ -291,7 +295,7 @@
                     <label class="checkbox-box__label" for="services-field-4">Подровнять
                       виски</label>
                   </div>
-                  <div class="additional-services__field checkbox-box">
+                  <div class="additional-services__field checkbox-box" aria-label="Убрать седину">
                     <label>
                       <input class="visually-hidden" id="services-field-5"
                         name="services-field-5" type="checkbox">
@@ -299,7 +303,8 @@
                     </label>
                     <label class="checkbox-box__label" for="services-field-5">Убрать седину</label>
                   </div>
-                  <div class="additional-services__field checkbox-box">
+                  <div class="additional-services__field checkbox-box" aria-label="Отполировать
+                      лысину">
                     <label>
                       <input class="visually-hidden" id="services-field-6"
                         name="services-field-6" type="checkbox">
@@ -316,7 +321,7 @@
 
         <div class="o-section">
           <div class="o-row">
-            <div class="o-col-4 o-col-m-4 o-col-max-6">
+            <div class="o-col-4 o-col-m-4 o-col-max-6" aria-label="Отправить заявку">
               <button class="booking-form__button button button--fill button--wide" type="submit">Отправить заявку</button>
             </div>
           </div>
@@ -328,9 +333,9 @@
   <footer class="page-footer">
     <div class="o-section">
       <div class="o-row">
-        <div class="o-col-4 o-col-m-2 o-col-max-2">
-          <div class="page-footer__contacts contacts">
-            <b class="contacts__title">Барбершоп &laquo;Бородинский&raquo;</b>
+        <div class="o-col-4 o-col-m-2 o-col-max-2" aria-label="Контакты">
+          <div class="page-footer__contacts contacts" aria-label="Содержание блока: Контакты">
+            <b class="contacts__title" aria-label="Барбершоп 'Бородинский'">Барбершоп &laquo;Бородинский&raquo;</b>
             <p class="contacts__text">
               г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
               <a class="contacts__phone button button--dark button--wide" href="tel:+78125556666">
@@ -340,10 +345,10 @@
             </p>
           </div>
         </div>
-        <div class="o-col-4 o-col-m-4 o-col-max-2 order-1">
+        <div class="o-col-4 o-col-m-4 o-col-max-2 order-1" aria-label="Ссылки на Соц.сети">
           <!-- Секция с социальными ссылками изменена в названии. С social на liberal(kappa). В связи с тем, что github скрывает все блоки с таким названием -->
-          <div class="page-footer__liberal liberal">
-            <b class="liberal__title">Давайте дружить!</b>
+          <div class="page-footer__liberal liberal" aria-label="Содержание блока: Ссылки на Соц.сети">
+            <b class="liberal__title" aria-label="Давайте дружить!">Давайте дружить!</b>
             <ul class="liberal__list">
               <li class="liberal__item">
                 <a class="liberal__link liberal__link--vkontakte"
@@ -364,9 +369,9 @@
             </ul>
           </div>
         </div>
-        <div class="o-col-4 o-col-m-2 o-col-max-2">
-          <div class="page-footer__copyright copyright">
-            <b class="copyright__text">Разработано:</b>
+        <div class="o-col-4 o-col-m-2 o-col-max-2" aria-label="Авторские права">
+          <div class="page-footer__copyright copyright" aria-label="Содержание блока: Авторские права">
+            <b class="copyright__text" aria-label="Разработано:">Разработано:</b>
             <a class="button button--dark button--wide copyright__link"
               href="https://htmlacademy.ru/intensive/adaptive">HTML
               Academy</a>
@@ -376,13 +381,13 @@
     </div>
   </footer>
 
-  <section class="modal-login">
+  <section class="modal-login" aria-label="Форма входа" aria-modal="true">
     <h2 class="modal-login__title">Личный кабинет</h2>
     <p class="modal-login__descr">Введите свой логин и пароль, чтобы войти</p>
 
     <form class="modal-login__form" action="https://echo.htmlacademy.ru/" method="POST">
       <div class="modal-login__user-info info-user">
-        <div class="info-user__field info-user__field--login input-box">
+        <div class="info-user__field info-user__field--login input-box" aria-label="Поле для ввода Логина">
           <input class="input-box__field" id="login-field" name="login-field" type="text" required>
           <span class="input-box__border input-box__border--top"></span>
           <span class="input-box__border input-box__border--right"></span>
@@ -390,7 +395,7 @@
           <span class="input-box__border input-box__border--left"></span>
           <label class="input-box__label" for="login-field">Логин</label>
         </div>
-        <div class="info-user__field info-user__field--password input-box">
+        <div class="info-user__field info-user__field--password input-box" aria-label="Поле для ввода Пароля">
           <input class="input-box__field" id="password-field" name="password-field" type="password" required>
           <span class="input-box__border input-box__border--top"></span>
           <span class="input-box__border input-box__border--right"></span>
@@ -401,7 +406,7 @@
       </div>
 
       <div class="modal-login__support support">
-        <div class="support__field checkbox-box">
+        <div class="support__field checkbox-box" aria-label="Чекбокс Запомните меня">
           <label>
             <input class="visually-hidden" id="support-field" name="support" type="checkbox">
             <span class="checkbox-box__field"></span>
