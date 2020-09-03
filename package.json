@@ -40,7 +40,7 @@
     "baukasten-grid": "^1.0.26",
     "bowser": "^2.3.0",
     "include-media": "^1.4.9",
-    "lazysizes": "^4.1.7",
+    "lazysizes": "^5.2.1",
     "modularscale-sass": "^3.0.8",
     "pyrsmk-toast": "^2.2.0",
     "smooth-scroll": "^16.0.3",
