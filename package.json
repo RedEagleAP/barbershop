@@ -45,7 +45,7 @@
     "pyrsmk-toast": "^2.2.0",
     "smooth-scroll": "^16.0.3",
     "svgxuse": "^1.2.6",
-    "swiper": "^4.5.0",
+    "swiper": "^6.5.1",
     "velocity-animate": "^1.5.2"
   },
   "devDependencies": {
